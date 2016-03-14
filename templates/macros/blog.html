@@ -1,0 +1,32 @@
+{% macro render_blog_post(post, from_index=false) %}
+<div class="section">
+<div class="container-blog">
+  <div class="row-blog">
+  <div class="col m4 s12">
+    <div class="card-panel hoverable">
+      <div class="center-align">
+        <h4><a style="color: black" class="card-title flow-text">{{ post.title }}</a><hr></h4>
+      </div>
+      <div class="card-content">
+        <p class="line-clamp line-clamp-5 flow-text">  {{ post.body }} </p>
+        <hr>
+    </div>
+    <div class="card-action">
+      <p class="meta"
+        written by
+        {% if post.twitter_handle %}
+          <a href="https://twitter.com/{{ post.twitter_handle
+            }}">{{ post.author or post.twitter_handle }}</a>
+        {% else %}
+          {{ post.author }}
+        {% endif %}
+        on {{ post.pub_date }}
+      </p>
+
+</div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+{% endmacro %}
