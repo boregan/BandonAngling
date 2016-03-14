@@ -1,2 +1,5 @@
 [project]
 name = Bandon Angling
+
+[servers.ghpages]
+target = ghpages+https://github.com/boregan/BandonAngling
