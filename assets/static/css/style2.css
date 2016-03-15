@@ -166,11 +166,6 @@ html {
  -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
- font-family: 'MavenPro';
- src: url('/static/font/Bariol_Regular.otf');
-}
-
 #logo {
     padding-bottom: 5rem;
     width: 48rem;
