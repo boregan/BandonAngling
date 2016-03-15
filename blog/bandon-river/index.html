@@ -6,11 +6,11 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
-    <link rel="stylesheet" href="{{ '/static/css/style2.css'|url }}">
+    <link rel="stylesheet" href="../../static/css/style2.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>{% block title %}Welcome{% endblock %} — Bandon Angling</title>
+    <title>Bandon River — Bandon Angling</title>
   </head>
 
 <body>
@@ -18,14 +18,14 @@
    <div class="header-unit">
      <div id="video-container">
        <video autoplay loop class="fillWidth">
-          <source src="{{ '/static/img/video.ogg'|url }}" type="video/ogg"/>
-          <source src="{{ '/static/img/video.webm'|url }}" type="video/webm">
-          <source src="{{ '/static/img/video.mp4'|url }}" type="video/mp4">
+          <source src="../../static/img/video.ogg" type="video/ogg"/>
+          <source src="../../static/img/video.webm" type="video/webm">
+          <source src="../../static/img/video.mp4" type="video/mp4">
         </video>
 
 
                <h4>Bandon Angling Association</h4>
-         <img src="{{ '/static/img/logo.png'|url }}" id="logo" class="img-responsive">
+         <img src="../../static/img/logo.png" id="logo" class="img-responsive">
 
 
      </div><!-- end video-container -->
@@ -44,16 +44,14 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li{% if this._path == '/' %} {% endif
-              %}><a href="{{ '/'|url }}">Home</a></li>
-              {% for href, title in [
-              ['/blog', 'Updates'],
-              ['/projects', 'Gallery'],
-              ['/about', 'Contact']
-              ] %}
-            <li{% if this.is_child_of(href) %} {% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-          {% endfor %}
+            <li><a href="../../">Home</a></li>
+              
+            <li ><a href="../../blog/">Updates</a></li>
+          
+            <li><a href="../../projects/">Gallery</a></li>
+          
+            <li><a href="../../about/">Contact</a></li>
+          
           </ul>
         </div>
       </nav>
@@ -68,17 +66,46 @@
                     <hr>
 
                   <div class="col-md-6">
-                    {% block body %}{% endblock %}
+                    
+  
+<div class="section">
+<div class="container-blog">
+  <div class="row-blog">
+  <div class="col m4 s12">
+    <div class="card-panel hoverable">
+      <div class="center-align">
+        <h4><a style="color: black" class="card-title flow-text">Bandon River</a><hr></h4>
+      </div>
+      <div class="card-content">
+        <p class="line-clamp line-clamp-5 flow-text">  <p>The dates set for payment of club permits are the 9th and 10th of February at 7pm to 10pm in the Munster Arms Hotel. Season permit prices for the upcoming season remain the same at 150euro. When receiving your permit you will also obtain a tag for your jacket or hat.</p>
+<p>The tag, along with licence, will change colour for the coming season. This is a visual aid to help fishery officers, water keepers and anglers alike to identify whether someone should be fishing or not.</p>
+<p>​We must stress this is not a licence and you must still carry your permit</p>
+ </p>
+        <hr>
+    </div>
+    <div class="card-action">
+      <p class="meta"
+        written by
+        
+          Ben O&#39;Regan
+        
+        on 
+      </p>
+
+</div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+
+
                   </div>
 
                   <div class="col-md-6 images">
                     <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": 5000, "setGallerySize": false, "pageDots": false }'>
 
-                      {% for image in this.attachments.images %}
-
-                      <img class="img-responsive photo" src="{{ image|url }}">
-
-                      {% endfor %}
+                      
 
                     </div>
 
@@ -111,7 +138,7 @@
 
 
        <!-- <h1>Bandon Angling Association</h1>
-         <img class="responsive-img" src="{{ '/static/img/logo.png'|url }}"/> -->
+         <img class="responsive-img" src="../../static/img/logo.png"/> -->
 
 
 
