@@ -7,8 +7,10 @@
 
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://npmcdn.com/flickity@1.1/dist/flickity.min.css">
-    <link rel="stylesheet" href="../../static/css/style2.css">
+    <link rel="stylesheet" href="../../static/css/style.css">
+
+    <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+
 
     <style text="text/css">
       @font-face {
@@ -17,99 +19,154 @@
       }
     </style>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <title>Welcome — Bandon Angling</title>
   </head>
 
   <body>
-    <div class="section">
-      <div class="header-unit">
-        <div id="video-container">
-          <video autoplay loop class="fillWidth">
-            <source src="../../static/img/video.ogg" type="video/ogg" />
-            <source src="../../static/img/video.webm" type="video/webm">
-              <source src="../../static/img/video.mp4" type="video/mp4">
-          </video>
-          <div id="top">
-            <h4>Bandon Angling Association</h4>
-            <img src="../../static/img/logo.png" id="logo" class="img-responsive">
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=290142004344540";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="section">
+        <div class="header-unit">
+          <div id="video-container">
+            <video autoplay loop class="fillWidth">
+              <source src="../../static/img/video.ogg" type="video/ogg" />
+              <source src="../../static/img/video.webm" type="video/webm">
+                <source src="../../static/img/video.mp4" type="video/mp4">
+            </video>
+            <div id="top">
+              <h4>Bandon Angling Association</h4>
+              <img src="../../static/img/logo.png" id="logo" class="img-responsive">
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="../../">Home</a>
-            </li>
-            
-            <li ><a href="../../blog/">Blog</a>
-            </li>
-            
-            <li><a href="../../visitors">Visitors</a>
-            </li>
-            
-            <li><a href="../../projects/">Gallery</a>
-            </li>
-            
-            <li><a href="../../about/">Contact</a>
-            </li>
-            
-        </ul>
-      </div>
-    </nav>
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="../../">Home</a>
+              </li>
+              
+              <li ><a href="../../blog/">Blog</a>
+              </li>
+              
+              <li><a href="../../visitors">Visitors</a>
+              </li>
+              
+              <li><a href="../../projects/">Gallery</a>
+              </li>
+              
+              <li><a href="../../about/">Contact</a>
+              </li>
+              
+          </ul>
+        </div>
+      </nav>
 
-    <div id="main">
-      <div class="container">
-        <div class="row">
+      <div id="main">
+        <div class="container">
+          <div class="row">
 
-          <div class="col-md-12 post">
-            
-            <div class="col-md-6">
-              <div id="title">
-                <h1>Recent Update</h1>
-                  <hr>
-                    <h3>Bandon Angling Association Guiding</h3>
-                    <h5><i>2016-03-17</i></h5>
-                      <div class="container-fluid">
-                          <div class="lead">
-                            <h4><p>Bandon Angling Association (BAA) have officially launched a guiding service for the 2016 season. Our qualified guides will offer you a professional service along eight miles of double bank fishing on West Cork’s beautiful Bandon River. Whether you’re hoping for the dainty sip of a brown trout, the electric slam of a sea trout or the unmistakable draw of a salmon, we can offer you our experience so you get the best out of your day on the river.</p>
+            <div class="col-md-12 post">
+              
+              <div class="col-md-6">
+                <div id="title">
+                  <h1>Recent Update</h1>
+                    <hr>
+                      <h3>Bandon Angling Association Guiding</h3>
+                      <h5><i>2016-03-17</i></h5>
+                        <div class="container-fluid">
+                            <div class="lead">
+                              <h4><p>Bandon Angling Association (BAA) have officially launched a guiding service for the 2016 season. Our qualified guides will offer you a professional service along eight miles of double bank fishing on West Cork’s beautiful Bandon River. Whether you’re hoping for the dainty sip of a brown trout, the electric slam of a sea trout or the unmistakable draw of a salmon, we can offer you our experience so you get the best out of your day on the river.</p>
 </h4>
-                          </div>
-                          <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green-900 mdl-color-text--white" style="float: right;" href="/blog">Read More</a>
+                            </div>
+                            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green-900 mdl-color-text--white" style="float: right;" href="/blog">Read More</a>
 
+                        </div>
+                          <div class="visible-xs"><hr></div>
                       </div>
                     </div>
+
+              <div class="col-md-6 images">
+                <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": 5000, "setGallerySize": false, "pageDots": false }'>
+                  
+                  <img class="img-responsive photo" src="../../blog/bandon-angling-association-guiding/10154428_1103683199652892_5031765155382300851_n.jpg"> 
+                </div>
+              </div>
+
+
+          <div class="container-fluid">
+            <div class="col-md-12">
+              <hr>
+
+
+                <div class="row">
+
+                  <div class="col-md-4">
+                    <a href="http://www.farsondigitalwatercams.com/locations/bandon#">
+                      <img class="img-responsive" href="http://www.farsondigitalwatercams.com/locations/bandon#" src="../../blog/bandon-angling-association-guiding/static/img/8130713.jpg"></img>
+                    </a>
                   </div>
 
-            <div class="col-md-6 images">
-              <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": 5000, "setGallerySize": false, "pageDots": false }'>
-                
-                <img class="img-responsive photo" src="../../blog/bandon-angling-association-guiding/10154428_1103683199652892_5031765155382300851_n.jpg"> 
+                  <div class="col-md-4">
+                    <div class="fb-page"
+                      data-href="https://www.facebook.com/BandonAnglingAssociation/"
+                      data-small-header="false"
+                      data-height="500"
+                      data-hide-cover="false"
+                      data-show-facepile="false">
+                        <div class="fb-xfbml-parse-ignore">
+                          <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/">
+                            <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
+                          </blockquote>
+                        </div>
+                      </div>
+                  </div>
+
+
+
+
+                  <div class="col-md-4">
+                    <img class="img-responsive" src="../../blog/bandon-angling-association-guiding/static/img/2527235_orig.jpg"></img>
+                  </div>
+
               </div>
             </div>
-          </div>
 
-          <div class="col-md-12 post">
-            <h1>Visitors</h1>
-            <hr>
-            <div class="col-md-6">
-              <h2>Information</h2>
+          </div>
+          <hr>
+        </div>
+
+            <div class="col-md-12 post">
+              <h1>Visitors</h1>
               <hr>
-              <h3>
+
+              <div class="col-md-6">
+                <img class="img-responsive guide" src="../../static/img/guiding.jpg"></img>
+                  <hr>
+              </div>
+
+              <div class="col-md-6">
+                <div class="container-fluid">
+                  <h2>Guiding Service Information</h2>
+                    <hr>
   
 
-<h2>Bandon Angling Association Guiding<hr></h2>
+<h3>Bandon Angling Association Guiding<hr></h3>
 
 <h4><i>2016-03-17</i></h4>
   <p>Bandon Angling Association (BAA) have officially launched a guiding service for the 2016 season. Our qualified guides will offer you a professional service along eight miles of double bank fishing on West Cork’s beautiful Bandon River. Whether you’re hoping for the dainty sip of a brown trout, the electric slam of a sea trout or the unmistakable draw of a salmon, we can offer you our experience so you get the best out of your day on the river.</p>
@@ -117,84 +174,131 @@
 <hr>
 
 
-</h3>
-            </div>
-            <div class="col-md-6">
-              <h2>Pricing</h2>
-              <br>
-              <h4>
-                      We aim to give you the best possible day out on the river. Our service will be tailored to meet all your specific needs. Please book in advance to avoid disappointment!
-                      <br>
+
+                      <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green-900 mdl-color-text--white" style="float: right;" href="../../visitors">Read More</a>
+                </div>
+              </div>
+
+            <div class="col-md-10 col-md-offset-1">
+
+            <div class="container-fluid text-center">
+                <h2>Pricing</h2>
+                <hr>
+                  <h3>
+                    <p>
                       1 person: €80 half day/€150 full day<br>
-                      2 people: €100 half day/€180 full day.<br>
+                      2 people: €100 half day/€180 full day<hr>
 
-                      Max 2 people per guide. If a group consists of more than 2 people, an extra guide is required at full price to ensure quality of service.<br>
-                      Family packages can be arranged.<br>
-                      Under 18’s must be accompanied by a parent.<br>
-                      A half day is considered to be 4 hours long and a full day is 8 hours long. Times can be arranged upon booking.<br>
-                      All guides are certified in First Aid and fully insured.<br>
-                      All tackle provided if necessary.<br>
-                      Club permit and state license are not included (prices of these are on our Visitors page).<br>
-                      If booking a date in advance, a 50% deposit is required.<br>
-                      If the river is out of order, an alternative location may be arranged or date changed.<br>
-                    </h4>
-            </div>
-
-
-            <div class="col-md-12 text-center">
-              <h2>Guides</h2>
-              <hr>
-            </div>
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6">
-                  <h2>Peter Aspinwall</h2>
-                  <p>Peter Aspinwall is a lifelong angler who moved to County Cork in 1996. Prior to that, he lived in Cambridgeshire, close to Grafham Water where he learnt to fly fish. He has primarily fished for Salmon and Bass since moving here and has been a member of the BAA for the last twelve years. He is a qualified Marine and Countryside tour guide specialising in Game Fishing. He consistently catches Salmon for himself and guests alike and is the guide on the private beat of the Bandon River at Kilcoleman.</p>
-                </div>
-                <div class="col-md-6">
-                  <img class="img-responsive images" src="../../static/img/image01.jpg"></img>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <img class="img-responsive images" src="../../static/img/image04.jpg"></img>
-                </div>
-                <div class="col-md-6">
-                  <h2>Phil Dewey</h2>
-                  <p>Phil Dewey has been an avid fly angler from an early age. Fishing competitively at a very high level for over forty years, he has guided anglers from all over the world, both novice and expert alike. Phil has fished the Bandon River since becoming a member of the BAA in the mid 70&#39;s and has many salmon and trout to his own rod. He is also a professional fly tyer, tying small trout flies on size twenty hooks up to big salmon flies on three inch tubes. So most of the fish he and his guests catch are on flies tied by the man himself. Phil has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.</p>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6">
-                  <h2>Jason Nash</h2>
-                  <p>Jason Nash is Environmental Officer and Secretary of BAA. He holds a degree in Zoology and is currently studying a course in Fisheries Management. Fishing on the Bandon since an early age, he has developed an intimate understanding of the river. Over the past few seasons he has kept an online blog, www.savagefishing.blogspot.com, and writes for Irish e-zine “Off the Scale”. Jason has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <img class="img-responsive" src="../../static/img/image03.jpg"></img>
-                </div>
+                      We aim to give you the best possible day out on the river. Our service will be tailored to meet all your specific needs. Please book in advance to avoid disappointment!
+                      Max 2 people per guide. If a group consists of more than 2 people, an extra guide is required at full price to ensure quality of service.
+                      Family packages can be arranged.
+                      Under 18’s must be accompanied by a parent.
+                      A half day is considered to be 4 hours long and a full day is 8 hours long. Times can be arranged upon booking.
+                      All guides are certified in First Aid and fully insured.
+                      All tackle provided if necessary.
+                      Club permit and state license are not included (prices of these are on our Visitors page).
+                      If booking a date in advance, a 50% deposit is required.
+                      If the river is out of order, an alternative location may be arranged or date changed.
+                    </p>
+                    </h3>
+                  <hr>
               </div>
 
             </div>
           </div>
+              <!-- <div class="col-md-12 text-center">
+                <h2>Guides</h2>
+                <hr>
+              </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Peter Aspinwall</h2>
+                    <p>Peter Aspinwall is a lifelong angler who moved to County Cork in 1996. Prior to that, he lived in Cambridgeshire, close to Grafham Water where he learnt to fly fish. He has primarily fished for Salmon and Bass since moving here and has been a member of the BAA for the last twelve years. He is a qualified Marine and Countryside tour guide specialising in Game Fishing. He consistently catches Salmon for himself and guests alike and is the guide on the private beat of the Bandon River at Kilcoleman.</p>
+                  </div>
+                  <div class="col-md-6">
+                    <img class="img-responsive images" src="../../static/img/image01.jpg"></img>
+                  </div>
+                </div>
 
-          <div class="col-md-12 post">
-          </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img class="img-responsive images" src="../../static/img/image04.jpg"></img>
+                  </div>
+                  <div class="col-md-6">
+                    <h2>Phil Dewey</h2>
+                    <p>Phil Dewey has been an avid fly angler from an early age. Fishing competitively at a very high level for over forty years, he has guided anglers from all over the world, both novice and expert alike. Phil has fished the Bandon River since becoming a member of the BAA in the mid 70&#39;s and has many salmon and trout to his own rod. He is also a professional fly tyer, tying small trout flies on size twenty hooks up to big salmon flies on three inch tubes. So most of the fish he and his guests catch are on flies tied by the man himself. Phil has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.</p>
+                  </div>
+                </div>
 
-          <div class="col-md-12 post">
-            <h1>Footer</h1>
-          </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h2>Jason Nash</h2>
+                    <p>Jason Nash is Environmental Officer and Secretary of BAA. He holds a degree in Zoology and is currently studying a course in Fisheries Management. Fishing on the Bandon since an early age, he has developed an intimate understanding of the river. Over the past few seasons he has kept an online blog, www.savagefishing.blogspot.com, and writes for Irish e-zine “Off the Scale”. Jason has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <img class="img-responsive" src="../../static/img/image03.jpg"></img>
+                  </div>
+                </div> -->
 
 
-        </div>
-      </div>
-    </div>
+
+
+              <!-- <div class="col-md-12 post">
+                <h1>River Information</h1>
+                <hr>
+              </div> -->
+
+              <div class="col-md-12 post">
+                <h1>Contact</h1>
+                <hr>
+                <div class="col-md-8">
+                  <div class="contact-form">
+                    <form id="contact-us" method="post" action="#">
+                        <div class="col-xs-6">
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div>
+                        <div class="col-xs-6">
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div>
+                        <div class="relative fullwidth col-xs-12">
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">SEND MESSAGE</button>
+                        </div>
+                        <div class="clear"></div>
+                    </form>
+
+                    <div class="mail-message-area">
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+                <div class="col-md-4">
+                  <h3>Contact Information</h3>
+                  <hr>
+                  <p><strong>Phone</strong>: 086 3724358
+
+                  Permits
+                  Day Permit Salmon/Sea Trout  €30
+                  Day Permit for Brown Trout  €15 (fly fishing only)
+                  Week  €150</p>
+                    <hr>
+                </div>
+                  <hr>
+              </div><!-- NOTE: END OF POST -->
+
+            </div><!-- NOTE: Container / Row / Main -->
+          </div><!-- NOTE: Container / Row / Main -->
+        </div><!-- NOTE: Container / Row / Main -->
+
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
     <script src="../../static/js/jQuery.succinct.min.js"></script>
     <script>
       $(function() {
