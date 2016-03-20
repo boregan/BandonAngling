@@ -221,9 +221,11 @@ section {
   border-top-right-radius: 12px;
 }
 .post:last-child {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  margin-bottom: 25px;
+  margin-top: 25px;
 }
 .post p {
   font-size: 18px;
@@ -330,8 +332,9 @@ section {
    box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
   -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
+  margin-bottom: 10px;
  }
-
+.comingsoon {margin:50px}
  .form-btn:hover{
    text-decoration: underline;
  }
@@ -342,6 +345,61 @@ input {
    z-index: 9999;
 }
 /* ----------------- */
+
+/* NOTE: loader */
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: #2D3A3A;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: loader 0.5s 2.2s ease forwards;
+    animation: loader 0.5s 2.2s ease-in forwards;
+    z-index: 99;
+}
+body .loader{
+  overflow-y: hidden;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 2px;
+    background-color: #666;
+    position: relative;
+    top: calc(50% - 1px);
+    left: calc(50% - 100px);
+}
+
+.progress-bar:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 4px;
+    position: absolute;
+    top: -1px;
+    border-left: 0px solid #ccc;
+    -webkit-animation: progress 1s ease-in-out forwards;
+    animation: progress 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes loader {
+    to {left: -100%;}
+}
+
+@keyframes loader {
+    to {left: -100%;}
+}
+
+@-webkit-keyframes progress {
+    to {border-left: 200px solid #ccc;}
+}
+
+@keyframes progress {
+    to {border-left: 200px solid #ccc;}
+}
+/* NOTE: loader */
+
 .images {
   padding-top: 20px;
   border: 1px solid #000;
@@ -359,6 +417,11 @@ input {
 .photo {
   width: 100%;
   height: 40rem;
+}
+.blog-body p {
+  font-family: 'Merriweather', serif;
+  font-size: 25px;
+  line-height: 30px;
 }
 blockquote {
   padding:10px 20px;
@@ -390,6 +453,27 @@ blockquote {
   width: 100%;
   height: 35rem;
 }
+.guide2 {
+  padding: 10px;
+  border: 1px solid #000;
+  height: 50rem;
+  margin-top: 15px;
+}
+.guiding-text p {
+  text-align: inherit;
+  font-size: 20px;
+  line-height: 30px;
+}
+.lead h4 p {
+  font-size: 19px;
+  line-height: 26px;
+}
+.intro p {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: lighter;
+  text-align: justify;
+ }
 
 @media (max-width: 481px) {
   .header-unit {
@@ -410,9 +494,25 @@ blockquote {
     padding: 5px;
     height: 25rem;
   }
+  .post {
+    background: #FAFAFA;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .post:first-child {
+    margin-top: 25px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .post:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 25px;
+  }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 960px) and (max-width: 768px) {
    .header-unit {
       background: linear-gradient(50deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%), url(https://source.unsplash.com/category/nature/960x600?river) no-repeat center center;
     }
@@ -424,6 +524,31 @@ blockquote {
     }
     .photo, .gallery {
       width: 100%;
-      height: 28rem
+      height: 45rem
+
+    }
+    .guide {
+      margin: 0;
+      padding: 5px;
+      height: 40rem;
+    }
+    .fb-page {
+      padding-left: 21.5vw;
+    }
+    .post {
+      background: #FAFAFA;
+      border: 1px solid #000;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .post:first-child {
+      margin-top: 25px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .post:last-child {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      margin-bottom: 25px;
     }
 }

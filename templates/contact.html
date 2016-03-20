@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ '/static/css/style.css'|url }}">
 
+    <link rel="shortcut icon" type="image/png" href="{{ '/static/img/favicon.png'|url }}"/>
+
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
 
     <style text="text/css">
@@ -22,6 +24,10 @@
   </head>
 
   <body>
+    <!-- <div class="loader">
+      <div class="progress-bar"></div>
+    </div> -->
+
     <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -29,9 +35,7 @@
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=290142004344540";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-      </script>
-
+      }(document, 'script', 'facebook-jssdk'));</script>
       <div class="section">
         <div class="header-unit">
           <div id="video-container">
@@ -69,61 +73,63 @@
         </div>
       </nav>
 
-    <div id="main">
-      <div class="container">
-        <div class="row">
+      <div id="main">
+        <div class="container">
+          <div class="row">
 
 
-              <div class="col-md-8 post">
-                  <h1>General Updates</h1>
-                  <hr>
 
-                    <div class="col-md-12">
-                      <div class="container-fluid blog">
-                        {% block body %}{% endblock %}
-                      </div>
+
+              <div class="col-md-12 post">
+                <hr>
+                <div class="col-md-8">
+                  <div class="contact-form">
+                    <form id="contact-us" method="post" action="#">
+                        <div class="col-xs-6">
+                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                        </div>
+                        <div class="col-xs-6">
+                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                        </div>
+                        <div class="relative fullwidth col-xs-12">
+                            <button type="submit" id="submit" name="submit" class="form-btn semibold">SEND MESSAGE</button>
+                        </div>
+                        <div class="clear"></div>
+                    </form>
+
+                    <div class="mail-message-area">
+                        <div class="alert gray-bg mail-message not-visible-message">
+                            <strong>Thank You !</strong> Your email has been delivered.
+                        </div>
                     </div>
-                    <!-- <div class="col-md-12">
-                    {% set post = site.query('/blog/*') %}
-                        {% for image in this.attachments.images %}
-                          <img class="img-responsive" src="{{ image|url }}">
-                        {% endfor %}
-                      </div> -->
-                  </div>
+                </div>
+              </div>
 
-
-                  <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2 category post">
-                    <h1>Categories</h1>
-                      <hr>
-                      <!-- NOTE: change the urls in these -->
-                      <div class="text-center">
-                        <a href="blog/rules-and-regulations"><h2>Rules and Regulations</h2></a>
-                        <a href="blog/rules-and-regulations"><h2>About the River</h2></a>
-                        <a href="blog/rules-and-regulations"><h2>Club Newsletter 2016</h2></a>
-                        <a href="blog/rules-and-regulations"><h2>Archive</h2></a>
-                        <a href="blog/rules-and-regulations"><h2>History</h2></a>
-                        <a href="blog/rules-and-regulations"><h2>Memorial Section</h2></a>
-                        <!-- <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-color--black mdl-color-text--white" href="{{ '/blog' }}">Read More</a> -->
-                        <hr>
-                        <div class="fb-page" stlye="float: left" data-href="https://www.facebook.com/BandonAnglingAssociation/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/BandonAnglingAssociation/"><a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a></blockquote></div></div>
-                        <hr>
-                      </div>
-                  </div>
+                <div class="col-md-4">
+                  <h3>Contact Information</h3>
+                  <hr>
+                  <p>
+                    <strong>Phone</strong>: 086 3724358<br>
+                    <strong>Email</strong>: info@bandonangling.com
+                  </p>
+                  <hr>
                 </div>
 
+                <div class="col-md-12">
+                  <hr>
+                </div>
 
-          <div class="col-md-12 post">
-            <h1>Footer</h1>
-          </div>
+              </div><!-- NOTE: END OF POST -->
 
+            </div><!-- NOTE: Container / Row / Main -->
+          </div><!-- NOTE: Container / Row / Main -->
+        </div><!-- NOTE: Container / Row / Main -->
 
-        </div>
-      </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
     <script src="{{ '/static/js/jQuery.succinct.min.js'|url }}"></script>
     <script>
       $(function() {
@@ -131,14 +137,6 @@
           size: 475
         });
       });
-    </script>
-    <script>
-    $('.row .btn').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $collapse = $this.closest('.collapse-group').find('.collapse');
-    $collapse.collapse('toggle');
-    });
     </script>
   </body>
 </html>
