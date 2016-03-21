@@ -24,13 +24,11 @@
     <title>Welcome — Bandon Angling</title>
 
   </head>
-  <body onload="vidLoading()">
+  <body>
     <script>
-      function onPlay()
-      {
-          $('.video-container').css("display","block"); //show the body of the html page
-          $('.loader').css("display":"none");
-      }
+    $(document).ready(function() {
+        document.getElementsByTagName("html")[0].style.visibility = "visible";
+    });
     </script>
 
     <div id="fb-root"></div>
