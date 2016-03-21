@@ -48,10 +48,12 @@
               <source src="{{ '/static/img/video.webm'|url }}" type="video/webm">
               <source src="{{ '/static/img/video.mp4'|url }}" type="video/mp4">
             </video>
+
             <div id="top">
               <h4>Bandon Angling Association</h4>
               <img src="{{ '/static/img/logo.png'|url }}" id="logo" class="img-responsive">
             </div>
+
           </div>
         </div>
       </div>
@@ -85,93 +87,114 @@
         <div class="container">
           <div class="row">
 
-          <div class="col-md-12 post">
-            <h1>Welcome to Bandon Angling</h1>
-            <hr>
-            <div class="col-md-8 col-md-offset-2 intro">
-              <div class="container-fluid">
-              <p>Bandon Angling Association would like to welcome you to our exciting new website.
-                Extra features have been added to enhance your experience, ease navigation and ensure
-                all the latest news is at your fingertips. Check out our regularly updated "Blog" for
-                the latest news on the river, the "Visitors" section detailing our newly launched
-                guiding service and the "Gallery" which will showcase fishermen's catches and the beauty of the Bandon.
-              </p><div class="text-center"><h3>Tight lines to all!</h3></div>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <hr>
-            </div>
-          </div>
+            <div class="col-md-12 post">
+              <h1 class="text-center">Welcome to Bandon Angling</h1>
+                <hr>
+
+                  <div class="col-md-8 col-md-offset-2 intro">
+                    <div class="container-fluid">
+                      <p>Bandon Angling Association would like to welcome you to our exciting new website.
+                        Extra features have been added to enhance your experience, ease navigation and ensure
+                        all the latest news is at your fingertips. Check out our regularly updated "Blog" for
+                        the latest news on the river, the "Visitors" section detailing our newly launched
+                        guiding service and the "Gallery" which will showcase fishermen's catches and the beauty of the Bandon.
+                      </p><div class="text-center"><h3>Tight lines to all!</h3></div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <hr>
+                  </div>
+                </div>
 
             <div class="col-md-12 post">
               {% set post = site.query('/blog/').first() %}
+              <div class="col-md-12">
+                <hr>
+              </div>
               <div class="col-md-6">
-                <div id="title">
-                  <h1>Recent Update</h1>
-                    <hr>
-                      <h3>{{ post.title }}</h3>
-                      <h5><i>{{ post.pub_date}}</i></h5>
-                        <div class="container-fluid">
-                            <div class="lead">
-                              <h4>{{ post.body }}</h4>
-                            </div>
-                            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green-900 mdl-color-text--white" style="float: right;" href="{{ 'http://boregan.github.io/BandonAngling/blog' }}">Read More</a>
 
-                        </div>
-
+              <h1 class="text-center">Recent Update</h1>
+              <hr>
+                <h3><b>{{ post.title }}</b></h3>
+                <h4><i>{{ post.pub_date}}</i></h4>
+                  <div class="container-fluid">
+                      <div class="lead">
+                        <h4>{{ post.body }}</h4>
                       </div>
+                        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--green-900 mdl-color-text--white" style="float: right;" href="{{ '/blog'|url }}">Read More</a>
+                  </div>
+
+
                       <div class="visible-xs visible-sm"><hr></div>
                     </div>
 
+            <div class="container-fluid">
               <div class="col-md-6 images">
-                <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": 5000, "setGallerySize": false, "pageDots": false }'>
+
+                <div class="gallery js-flickity"
+                data-flickity-options='{
+                  "autoPlay": 5000,
+                  "setGallerySize": false,
+                  "pageDots": false
+                }'>
                   {% for image in this.attachments.images %}
                   <img class="img-responsive photo" src="{{ image|url }}"> {% endfor %}
                 </div>
               </div>
+            </div>
 
 
           <div class="container-fluid">
             <div class="col-md-12">
               <hr>
-
-
                 <div class="row">
 
-                  <div class="col-md-4 col-xs-12">
+                  <div class="col-md-4">
                     <a href="http://www.farsondigitalwatercams.com/locations/bandon#">
-                      <img class="img-responsive" href="http://www.farsondigitalwatercams.com/locations/bandon#" src="{{ 'static/img/8130713.jpg'|url }}"></img>
+                      <img
+                      class="img-responsive"
+                      href="http://www.farsondigitalwatercams.com/locations/bandon#"
+                      src="{{ 'static/img/8130713.jpg'|url }}">
+                      </img>
                     </a>
+                    <div class="visible-xs visible-sm"><hr></div>
                   </div>
 
-                  <div class="col-md-4 col-xs-12">
-                    <div class="fb-page"
+
+                <div class="col-md-4 hidden-xs hidden-sm">
+                  <div class="fb-page"
                       data-href="https://www.facebook.com/BandonAnglingAssociation/"
                       data-small-header="false"
-                      data-height="500"
-                      data-hide-cover="false"
+                      data-width="420"
                       data-show-facepile="false">
-                        <div class="fb-xfbml-parse-ignore">
-                          <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/">
-                            <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
-                          </blockquote>
-                        </div>
+                      <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/">
+                          <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
+                        </blockquote>
                       </div>
-                  </div>
+                    </div>
+                </div>
 
-                  <div class="col-md-4 col-xs-12">
-                    <img class="img-responsive" src="{{ 'static/img/2527235_orig.jpg'|url }}"></img>
-                  </div>
+                <div class="col-md-4">
+                  <img class="img-responsive" src="{{ 'static/img/2527235_orig.jpg'|url }}"></img>
+                </div>
+
+              </div>
 
               </div>
             </div>
 
-          </div>
-          <hr>
-        </div>
+            <div class="col-md-12">
+              <hr>
+            </div>
 
-            <div class="col-md-12 post">
-              <h1>Visitors</h1>
+          </div>
+
+
+
+          <div class="col-md-12 post">
+              <h1 class="text-center">Visitors</h1>
               <hr>
 
               <div class="col-md-6">
@@ -190,7 +213,7 @@
               <hr>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-7">
             <div class="container-fluid guiding-text">
               <div class="text-center">
                 <h2>Pricing</h2>
@@ -215,53 +238,17 @@
               </div>
             </div>
 
-            <div class="hidden-sm hidden-xs col-md-4">
+            <div class="hidden-sm hidden-xs col-md-5">
               <img class="img-responsive guide2" src="{{ '/static/img/guiding2.jpg'|url }}"></img>
             </div>
 
             <div class="col-md-12">
               <hr>
             </div>
-
           </div>
-              <!-- <div class="col-md-12 text-center">
-                <h2>Guides</h2>
-                <hr>
-              </div>
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-md-6">
-                    <h2>Peter Aspinwall</h2>
-                    <p>Peter Aspinwall is a lifelong angler who moved to County Cork in 1996. Prior to that, he lived in Cambridgeshire, close to Grafham Water where he learnt to fly fish. He has primarily fished for Salmon and Bass since moving here and has been a member of the BAA for the last twelve years. He is a qualified Marine and Countryside tour guide specialising in Game Fishing. He consistently catches Salmon for himself and guests alike and is the guide on the private beat of the Bandon River at Kilcoleman.</p>
-                  </div>
-                  <div class="col-md-6">
-                    <img class="img-responsive images" src="{{ '/static/img/image01.jpg'|url }}"></img>
-                  </div>
-                </div>
 
-                <div class="row">
-                  <div class="col-md-6">
-                    <img class="img-responsive images" src="{{ '/static/img/image04.jpg'|url }}"></img>
-                  </div>
-                  <div class="col-md-6">
-                    <h2>Phil Dewey</h2>
-                    <p>Phil Dewey has been an avid fly angler from an early age. Fishing competitively at a very high level for over forty years, he has guided anglers from all over the world, both novice and expert alike. Phil has fished the Bandon River since becoming a member of the BAA in the mid 70&#39;s and has many salmon and trout to his own rod. He is also a professional fly tyer, tying small trout flies on size twenty hooks up to big salmon flies on three inch tubes. So most of the fish he and his guests catch are on flies tied by the man himself. Phil has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.</p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-6">
-                    <h2>Jason Nash</h2>
-                    <p>Jason Nash is Environmental Officer and Secretary of BAA. He holds a degree in Zoology and is currently studying a course in Fisheries Management. Fishing on the Bandon since an early age, he has developed an intimate understanding of the river. Over the past few seasons he has kept an online blog, www.savagefishing.blogspot.com, and writes for Irish e-zine “Off the Scale”. Jason has completed a guiding course with APGAI-IRELAND Chairperson, Glenda Powell.
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <img class="img-responsive" src="{{ '/static/img/image03.jpg'|url }}"></img>
-                  </div>
-                </div> -->
-
-              <div class="col-md-12 post">
-                <hr>
+            <div class="col-md-12 post">
+              <hr>
                 <div class="col-md-8">
                   <div class="contact-form">
                     <form id="contact-us" method="post" action="#">

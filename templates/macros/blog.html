@@ -1,9 +1,11 @@
 {% macro render_blog_post(post, from_index=false) %}
 
-<h3>{{ post.title }}<hr></h3>
+<h3><b>{{ post.title }}</b><hr></h3>
 
 <h4><i>{{ post.pub_date}}</i></h4>
-  {{ post.body }}
+<div class="general-updates">
+  <h4>{{ post.body }}</h4>
+</div>
 <hr>
 
 {% endmacro %}
