@@ -152,6 +152,7 @@ body,
 html {
  font-family: 'Merriweather', serif;
  -webkit-font-smoothing: antialiased;
+  letter-spacing: .45px;
 }
 
 #logo {
@@ -472,7 +473,7 @@ body .loader{
     width: 100%
   }
 .guiding-text p {
-  text-align: inherit;
+  text-align: justify;
   font-size: 20px;
   line-height: 30px;
 }
