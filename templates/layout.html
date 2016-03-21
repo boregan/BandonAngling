@@ -12,6 +12,15 @@
     <link rel="shortcut icon" type="image/png" href="{{ '/static/img/favicon.png'|url }}"/>
 
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+    $('#content').hide();
+    $('.loader').show();
+    $(window).bind('load', function() {
+    $('.loader').hide();
+    $('#content').fadeIn('slow');
+    });
+  </script>
 
     <style text="text/css">
       @font-face {
@@ -23,8 +32,8 @@
     <title>Welcome — Bandon Angling</title>
   </head>
 
-  <body>
-    
+  <body id="#content">
+
     <div class="loader">
       <div class="progress-bar"></div>
     </div>
@@ -301,7 +310,6 @@
         </div><!-- NOTE: Container / Row / Main -->
 
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="{{ '/static/js/jQuery.succinct.min.js'|url }}"></script>
     <script>
