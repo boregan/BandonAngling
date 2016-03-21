@@ -1,0 +1,5 @@
+_model: page
+---
+title: Sent
+---
+_template: sent.html

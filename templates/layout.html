@@ -220,7 +220,8 @@
                 <hr>
                   <h3>
                       1 person: €80 half day/ €150 full day<br><br>
-                      2 people: €100 half day/ €180 full day<hr>
+                      2 people: €100 half day/ €180 full day
+                      <hr>
                   </h3>
                     </div>
                     <p>
@@ -235,6 +236,8 @@
                       If booking a date in advance, a 50% deposit is required.
                       If the river is out of order, an alternative location may be arranged or date changed.
                   </p>
+                  <hr>
+                  <h3 class="text-center">Email: info@bandonangling.com</h3>
               </div>
             </div>
 
@@ -247,48 +250,46 @@
             </div>
           </div>
 
-            <div class="col-md-12 post">
-              <hr>
-                <div class="col-md-8">
-                  <div class="contact-form">
-                    <form id="contact-us" method="post" action="#">
-                        <div class="col-xs-6">
-                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
-                            <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                        </div>
-                        <div class="col-xs-6">
-                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
-                        </div>
-                        <div class="relative fullwidth col-xs-12">
-                            <button type="submit" id="submit" name="submit" class="form-btn semibold">SEND MESSAGE</button>
-                        </div>
-                        <div class="clear"></div>
-                    </form>
+          <div class="col-md-12 post">
+            <hr>
+              <div class="col-md-8">
+                <div class="contact-form">
+                  <form id="contact-us" method="post" action="http://formspree.io/ben@bandonangling.com">
+                      <div class="col-xs-6">
+                          <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                          <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                          <input type="text" name="_subject" id="subject" required="required" class="form" placeholder="Subject" />
+                          <input type="hidden" name="_next" value="{{ '/sent'|url }}" />
+                      </div>
 
-                    <div class="mail-message-area">
-                        <div class="alert gray-bg mail-message not-visible-message">
-                            <strong>Thank You !</strong> Your email has been delivered.
-                        </div>
-                    </div>
-                </div>
+                      <div class="col-xs-6">
+                          <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                      </div>
+
+                      <div class="relative fullwidth col-xs-12">
+                          <button type="submit" value="Send" class="form-btn semibold">SEND MESSAGE</button>
+                      </div>
+                      <div class="clear"></div>
+                  </form>
+
+              </div>
+            </div>
+
+              <div class="col-md-4">
+                <h3>Contact Information</h3>
+                <hr>
+                <p>
+                  <strong>Phone</strong>: 086 3724358<br><br>
+                  <strong>Email</strong>: info@bandonangling.com
+                </p>
+              
               </div>
 
-                <div class="col-md-4">
-                  <h3>Contact Information</h3>
-                  <hr>
-                  <p>
-                    <strong>Phone</strong>: 086 3724358<br>
-                    <strong>Email</strong>: info@bandonangling.com
-                  </p>
-                  <hr>
-                </div>
+              <div class="col-md-12">
+                <hr>
+              </div>
 
-                <div class="col-md-12">
-                  <hr>
-                </div>
-
-              </div><!-- NOTE: END OF POST -->
+            </div><!-- NOTE: END OF POST -->
 
             </div><!-- NOTE: Container / Row / Main -->
           </div><!-- NOTE: Container / Row / Main -->

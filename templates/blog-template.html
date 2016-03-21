@@ -97,12 +97,14 @@
                       <hr>
                       <!-- NOTE: change the urls in these -->
                       <div class="text-center">
-                        <a href="/rules-and-regulations"><h2>Rules and Regulations</h2></a>
-                        <a href="/rules-and-regulations"><h2>About the River</h2></a>
-                        <a href="/rules-and-regulations"><h2>Club Newsletter 2016</h2></a>
-                        <a href="/rules-and-regulations"><h2>Archive</h2></a>
-                        <a href="/rules-and-regulations"><h2>History</h2></a>
+                        <a href="{{ 'rules-and-regulations/'|url }}"><h2>Rules and Regulations</h2></a>
+                        <a href="{{ 'club-newsletter/'|url }}"><h2>Club Newsletter 2016</h2></a>
                         <a href="/rules-and-regulations"><h2>Memorial Section</h2></a>
+                        <a href="{{ 'about-the-river/'|url }}"><h2>About the River</h2></a>
+                        <a href="{{ 'history/'|url }}"><h2>History</h2></a>
+                        <a href="{{ 'archive/'|url }}"><h2>Archive</h2></a>
+
+
                         <!-- <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect  mdl-color--black mdl-color-text--white" href="{{ '/blog' }}">Read More</a> -->
                         <hr>
                         <div
@@ -129,17 +131,7 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-    <script src="{{ '/static/js/jQuery.succinct.min.js'|url }}"></script>
-    <script>
-      $(function() {
-        $('.lead').succinct({
-          size: 475
-        });
-      });
-    </script>
     <script>
     $('.row .btn').on('click', function(e) {
     e.preventDefault();
