@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../../static/img/favicon.png"/>
 
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <style text="text/css">
       @font-face {
@@ -22,17 +22,9 @@
     </style>
 
     <title>Welcome — Bandon Angling</title>
-  </head>
 
+  </head>
   <body>
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=290142004344540";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
       <div class="section">
         <div class="header-unit">
           <div id="video-container">
@@ -86,7 +78,7 @@
             <div class="col-md-12 post">
               <div class="col-md-8 col-md-offset-2">
 
-                  <h1>Bandon River</h1>
+                  <h1 class="text-center">Bandon River</h1>
                   <hr>
                   <div class="blog-text">
                     <p><p>The dates set for payment of club permits are the 9th and 10th of February at 7pm to 10pm in the Munster Arms Hotel. Season permit prices for the upcoming season remain the same at 150euro. When receiving your permit you will also obtain a tag for your jacket or hat.</p>
@@ -95,20 +87,23 @@
 </p>
                   </div>
               </div>
+              <div class="col-md-12">
+                <hr>
+              </div>
             </div>
 
-            <div class="col-md-12 post">
+            <!-- <div class="col-md-12 post">
               <h1></h2>
               <div class="col-md-4 col-md-offset-4">
                   
               </div>
-            </div>
+            </div> -->
 
-              <div class="col-md-12 post">
-                <hr>
+            <div class="col-md-12 post">
+              <hr>
                 <div class="col-md-8">
                   <div class="contact-form">
-                    <form id="contact-us" method="post" action="#">
+                    <form id="contact-us" method="post" action="http://formspree.io/ben@bandonangling.com">
                         <div class="col-xs-6">
                             <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
                             <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
@@ -131,24 +126,26 @@
                 </div>
               </div>
 
-                <div class="col-md-4">
-                  <h3>Contact Information</h3>
-                  <hr>
-                  <p>
-                    <strong>Phone</strong>: 086 3724358<br>
-                    <strong>Email</strong>: info@bandonangling.com
-                  </p>
+              <div class="col-md-4">
+                <h3>Contact Information</h3>
+                <hr>
+                <p>
+                  <strong>Phone</strong>: 086 3724358<br><br>
+                  <strong>Email</strong>: info@bandonangling.com
+                </p>
+              
+              </div>
+
+                <div class="col-md-12">
                   <hr>
                 </div>
+
               </div><!-- NOTE: END OF POST -->
 
             </div><!-- NOTE: Container / Row / Main -->
           </div><!-- NOTE: Container / Row / Main -->
         </div><!-- NOTE: Container / Row / Main -->
 
-
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="../../static/js/jQuery.succinct.min.js"></script>
   </body>
 </html>

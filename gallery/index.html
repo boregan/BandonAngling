@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png"/>
 
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <style text="text/css">
       @font-face {
@@ -22,8 +22,8 @@
     </style>
 
     <title>Welcome — Bandon Angling</title>
-  </head>
 
+  </head>
   <body>
       <div class="section">
         <div class="header-unit">
@@ -64,7 +64,7 @@
               <li ><a href="../gallery/">Gallery</a>
               </li>
               
-              <li><a href="../about">Contact</a>
+              <li><a href="../contact/">Contact</a>
               </li>
               
           </ul>
@@ -77,7 +77,7 @@
 
           <div class="col-md-12 post">
             <hr>
-            <h1 class="comingsoon">COMING SOON</h1>
+            <h1 class="comingsoon text-center">COMING SOON</h1>
             <hr>
           </div>
 
@@ -85,55 +85,49 @@
 
           <div class="col-md-12 post">
             <hr>
-            <div class="col-md-8">
-              <div class="contact-form">
-                <form id="contact-us" method="post" action="#">
-                    <div class="col-xs-6">
-                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                        <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
-                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                    </div>
-                    <div class="col-xs-6">
-                        <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
-                    </div>
-                    <div class="relative fullwidth col-xs-12">
-                        <button type="submit" id="submit" name="submit" class="form-btn semibold">SEND MESSAGE</button>
-                    </div>
-                    <div class="clear"></div>
-                </form>
+              <div class="col-md-8">
+                <div class="contact-form">
+                  <form id="contact-us" method="post" action="http://formspree.io/ben@bandonangling.com">
+                      <div class="col-xs-6">
+                          <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                          <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                          <input type="text" name="_subject" id="subject" required="required" class="form" placeholder="Subject" />
+                          <input type="hidden" name="_next" value="../sent/" />
+                      </div>
 
-                <div class="mail-message-area">
-                    <div class="alert gray-bg mail-message not-visible-message">
-                        <strong>Thank You !</strong> Your email has been delivered.
-                    </div>
-                </div>
+                      <div class="col-xs-6">
+                          <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                      </div>
+
+                      <div class="relative fullwidth col-xs-12">
+                          <button type="submit" value="Send" class="form-btn semibold">SEND MESSAGE</button>
+                      </div>
+                      <div class="clear"></div>
+                  </form>
+
+              </div>
             </div>
-          </div>
 
-          <div class="col-md-4">
-            <h3>Contact Information</h3>
-            <hr>
-            <p>
-              <strong>Phone</strong>: 086 3724358<br>
-              <strong>Email</strong>: info@bandonangling.com
-            </p>
-            <hr>
-          </div>
-        </div><!-- NOTE: END OF POST -->
+              <div class="col-md-4">
+                <h3>Contact Information</h3>
+                <hr>
+                <p>
+                  <strong>Phone</strong>: 086 3724358<br><br>
+                  <strong>Email</strong>: info@bandonangling.com
+                </p>
+          
+              </div>
+
+              <div class="col-md-12">
+                <hr>
+              </div>
+
+            </div><!-- NOTE: END OF POST -->
 
             </div>
           </div><!-- NOTE: Container / Row / Main -->
         </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="../static/js/jQuery.succinct.min.js"></script>
-    <script>
-      $(function() {
-        $('.lead').succinct({
-          size: 475
-        });
-      });
-    </script>
   </body>
 </html>

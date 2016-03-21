@@ -395,6 +395,7 @@ body .loader{
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
 .img-responsive {
   margin:0 auto;
 }
@@ -402,8 +403,13 @@ body .loader{
 
 .blog-text p {
   font-family: 'Merriweather', serif;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: justify;
+}
+.blog-text a {
+  text-decoration: underline;
+  color: #000
 }
 
 /* NOTE: CATEGORY STUFF */
@@ -444,14 +450,27 @@ body .loader{
   padding: 10px;
   border: 1px solid #000;
   width: 100%;
-  height: 35rem;
+  height: 40vh;
 }
 .guide2 {
   padding: 10px;
   border: 1px solid #000;
-  height: 60rem;
+  height: 65vh;
   margin-top: 15px;
 }
+.guide3 {
+  padding: 10px;
+  border: 1px solid #000;
+  height: 50vh;
+  margin-top: 15px;
+}
+.guide-img {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top: 4rem;
+    height: 40vh;
+    width: 100%
+  }
 .guiding-text p {
   text-align: inherit;
   font-size: 20px;
@@ -483,6 +502,10 @@ body .loader{
     margin: 0;
     padding: 5px;
     height: 25rem;
+  }
+  .guide-img {
+    height: 20rem;
+    margin: 0
   }
   #general-updates {
     border-top-right-radius: 12px;
