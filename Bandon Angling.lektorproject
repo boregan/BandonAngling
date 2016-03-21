@@ -2,4 +2,4 @@
 name = Bandon Angling
 
 [servers.ghpages]
-target = ghpages+https://boregan/BandonAngling
+target = ghpages+https://boregan/BandonAngling?cname=www.bandonangling.com
