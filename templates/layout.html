@@ -13,14 +13,6 @@
 
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script>
-    $('#content').hide();
-    $('.loader').show();
-    $(window).bind('load', function() {
-    $('.loader').hide();
-    $('#content').fadeIn('slow');
-    });
-  </script>
 
     <style text="text/css">
       @font-face {
@@ -30,13 +22,16 @@
     </style>
 
     <title>Welcome — Bandon Angling</title>
+
   </head>
-
-  <body id="#content">
-
-    <div class="loader">
-      <div class="progress-bar"></div>
-    </div>
+  <body onload="vidLoading()">
+    <script>
+      function onPlay()
+      {
+          $('.video-container').css("display","block"); //show the body of the html page
+          $('.loader').css("display":"none");
+      }
+    </script>
 
     <div id="fb-root"></div>
       <script>(function(d, s, id) {
@@ -46,13 +41,14 @@
         js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=290142004344540";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
+
       <div class="section">
         <div class="header-unit">
           <div id="video-container">
             <video autoplay loop class="fillWidth">
               <source src="{{ '/static/img/video.ogg'|url }}" type="video/ogg" />
               <source src="{{ '/static/img/video.webm'|url }}" type="video/webm">
-                <source src="{{ '/static/img/video.mp4'|url }}" type="video/mp4">
+              <source src="{{ '/static/img/video.mp4'|url }}" type="video/mp4">
             </video>
             <div id="top">
               <h4>Bandon Angling Association</h4>
@@ -60,6 +56,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="loader">
+        <div class="progress-bar"></div>
       </div>
 
       <nav class="navbar navbar-default" role="navigation">
