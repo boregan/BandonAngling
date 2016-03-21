@@ -1,3 +1,5 @@
+html { visibility:hidden; }
+.loader { visibility:visible}
 /*! Flickity v1.1.1
 http://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -479,7 +481,7 @@ blockquote {
   .header-unit {
     background: linear-gradient(50deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%), url(https://source.unsplash.com/category/nature/800x600?river) no-repeat center center;
   }
-  .video-container {
+  #video-container {
     display:none
   }
   #logo {
@@ -519,7 +521,7 @@ blockquote {
     #logo {
         padding-bottom: 8rem;
     }
-    .video-container {
+    #video-container {
       display: none;
     }
     .photo, .gallery {
