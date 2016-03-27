@@ -147,7 +147,25 @@ video.fillWidth {
   height: 43rem;
   width: 100%;
 }
-
+#foot {
+ width: 100%;
+ background-attachment: fixed;
+ bottom: 0pt;
+ left: 0pt;
+ background-color: #FAFAFA;
+ padding-top: 22px;
+ padding-bottom: 22px;
+ text-align: center;
+}
+#foot a {
+  font-family: 'MavenPro';
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+#foot h3 {
+  display: inline;
+}
 body,
 html {
  font-family: 'Merriweather', serif;
@@ -195,24 +213,20 @@ section {
 .navbar {
   margin-bottom: 0;
 }
-
 #main {
   background: #2D3A3A;
-  min-height: 100rem;
 }
-
 #main h1 {
   color: black;
-
   font-family: 'MavenPro';
 }
-
 .post {
   background: #FAFAFA;
   border: 1px solid #000;
   padding: 10px;
   margin-bottom: 20px;
 }
+
 
 .navbar-collapse.in {
     overflow-y: visible;
@@ -222,12 +236,7 @@ section {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-.post:last-child {
 
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  margin-bottom: 25px;
-}
 .post p {
   font-size: 18px;
 }
@@ -488,10 +497,13 @@ body .loader{
 .intro p {
   font-size: 21px;
   line-height: 30px;
-
   text-align: justify;
  }
-
+ .post:last-child {
+   border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+   margin-bottom: 30px;
+ }
 @media (max-width: 481px) {
   .header-unit {
     background: linear-gradient(50deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%), url(https://source.unsplash.com/category/nature/800x600?river) no-repeat center center;
