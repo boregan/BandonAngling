@@ -543,10 +543,6 @@ body .loader{
    .header-unit {
       background: linear-gradient(50deg, rgba(0,0,0,0.6) 10%, rgba(0,0,0,0.2) 90%), url(https://source.unsplash.com/category/nature/960x600?river) no-repeat center center;
     }
-    .gallery, .photo {
-      height: 30rem;
-      width: 100%;
-    }
     video {
       display: none;
     }
