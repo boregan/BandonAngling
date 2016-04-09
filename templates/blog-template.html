@@ -87,14 +87,17 @@
       <div class="container">
         <div class="row">
 
-
               <div class="col-md-8" id="general-updates">
                   <h1 class="text-center">General Updates</h1>
                   <hr>
 
                     <div class="col-md-12">
                       <div class="container-fluid blog">
-                        {% block body %}{% endblock %}
+                        {% block body %}
+                          {% set images = this.attachments.images.all() %}
+                          {% for image in images %}
+                        <img class="img-responsive img-thumbnail" src="{{ image|url }}"></img> {% endfor %}
+                        {% endblock %}
                       </div>
                     </div>
                     <!-- <div class="col-md-12">
