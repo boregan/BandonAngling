@@ -536,7 +536,7 @@ body .loader{
     height: 30rem;
     width: 100%;
   }
-  .guide-img {
+  .guide-img{
     height: 25rem;
     margin: 0;
     padding: 10px;
@@ -590,4 +590,20 @@ body .loader{
       border-bottom-right-radius: 12px;
       margin-bottom: 25px;
     }
+}
+}
+.item {
+    width: 200px;
+    float: left;
+}
+.item img {
+    display: block;
+    width: 100%;
+}
+.photo-gallery {
+    padding-top: 20px;
+    border: 1px solid #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
 }
