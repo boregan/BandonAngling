@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/grid.css">
 
     <link rel="shortcut icon" type="image/png" href="../static/img/favicon.png"/>
 
     <script src="https://npmcdn.com/flickity@1.1/dist/flickity.pkgd.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="../static/js/jquery-1.10.1.min.js"></script>
+    <!-- <script src="../static/js/flickity.js"></script> -->
+
 
     <style text="text/css">
       @font-face {
@@ -86,10 +89,58 @@
           <div class="row">
 
           <div class="col-md-12 post">
-            <hr>
-            <h1 class="comingsoon text-center">COMING SOON</h1>
-            <hr>
+              <div class="col-md-8 col-md-offset-2">
+
+                <div class="js-flickity photo-gallery"
+                data-flickity-options='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false}'>
+                  
+                  <img class="img-responsive photo" src="../gallery/11825994_912941372078542_150974653018101856_n (1).jpg"> 
+                  <img class="img-responsive photo" src="../gallery/1480548_1052602584779086_7001236592091640830_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/11214349_911434458895900_2074789680450864431_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/11212715_871842132855133_7370146219298488682_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13443111_1072219379484073_5242031257708950305_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13418473_1072219356150742_276831572557444226_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13239061_1056456524393692_737078101794717903_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/10443360_920957914610221_7006645760683620279_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/10407191_784704741568873_78806247053154574_n.jpg"> 
+                </div>
+
+                <!-- <div class="js-flickity gallery-nav"
+                  data-flickity-options='{ "asNavFor": ".photo-gallery", "contain": true, "pageDots": false }'>
+                  
+                  <img class="img-responsive photo" src="../gallery/11825994_912941372078542_150974653018101856_n (1).jpg"> 
+                  <img class="img-responsive photo" src="../gallery/1480548_1052602584779086_7001236592091640830_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/11214349_911434458895900_2074789680450864431_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/11212715_871842132855133_7370146219298488682_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13443111_1072219379484073_5242031257708950305_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13418473_1072219356150742_276831572557444226_o.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/13239061_1056456524393692_737078101794717903_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/10443360_920957914610221_7006645760683620279_n.jpg"> 
+                  <img class="img-responsive photo" src="../gallery/10407191_784704741568873_78806247053154574_n.jpg"> 
+                </div> -->
+              </div>
+
+
           </div>
+            <hr>
+          <!-- <div class="col-md-12 post">
+            <hr>
+            <div class="row">
+
+            <div class="col-md-8">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/4789767_orig.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/5663983_orig.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/anthony-buckley-9lbs-april.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/anthony-buckley-11lbs-april.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/anthony-buckley-12lbs-april.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/bob-barton-4lbs-june.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/david-mccann-8lbs-april.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/eric-fuller-11.5lbs-march.jpg">
+            <img class="img-responsive blog-img-col center-align" src="../static/img/LANDSCAPE/phil-dewey-13.2lbs-may.jpg">
+
+          </div>
+          </div>
+          </div> -->
 
 
 
@@ -147,5 +198,8 @@
         </div>
 
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//masonry.desandro.com/masonry.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
+
   </body>
 </html>
