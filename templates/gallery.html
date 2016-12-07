@@ -67,7 +67,7 @@
           <ul class="nav navbar-nav">
             <li{% if this._path=='/' %} {% endif %}><a href="{{ '/'|url }}">Home</a>
               </li>
-              {% for href, title in [ ['/blog', 'Blog'], ['/visitors', 'Visitors'], ['/gallery', 'Gallery'], ['/contact', 'Contact'] ] %}
+              {% for href, title in [ ['/blog', 'Blog'], ['/visitors', 'Visitors'], ['/blog/membership-form/', 'Membership'], ['/gallery', 'Gallery'], ['/contact', 'Contact'] ] %}
               <li{% if this.is_child_of(href) %} {% endif %}><a href="{{ href|url }}">{{ title }}</a>
               </li>
               {% endfor %}
