@@ -41,8 +41,7 @@ http://flickity.metafizzy.co
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color:#196b40;
-  text-shadow:
-               .1px .1px .1px #196b40;
+  text-shadow: .1px .1px .1px #196b40;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #ffffff;
