@@ -3,8 +3,8 @@ version: 1.0
 jobs:
   build:
     docker:
-      - image: circleci/python:2.7
-    working_directory: ~/
+      - image: circleci/python:latest
+    working_directory: ~/project
     steps:
       - run:
           name: Install Lektor
