@@ -3,12 +3,12 @@ version: 1.0
 jobs:
   build:
     docker:
-      - image: circleci/python:latest
+      - image: circleci/python:2.7
     working_directory: ~/
     steps:
       - run:
           name: Install Lektor
           command: |
-            pip install git+https://github.com/singingwolfboy/lektor.git@fix-ghpages-https-deploy#egg=lektor
+            pip install Lektor
             lektor build
             lektor deploy ghpages
