@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:latest
-    working_directory: ~/BandonAngling/
+    working_directory: ~
     steps:
       - run:
           name: Install Lektor
