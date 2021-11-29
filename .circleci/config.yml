@@ -4,11 +4,10 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6
-    working_directory: ~/BandonAngling
     steps:
       - run:
           name: Install Lektor
           command: |
-            ls
+
             pip install Lektor
             lektor build && lektor deploy ghpages
