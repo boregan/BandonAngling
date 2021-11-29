@@ -1,13 +1,15 @@
-language: python
-python: 2.7
-cache:
-  directories:
-    - $HOME/.cache/pip
-    - $HOME/.cache/lektor/builds
-install: "pip install git+https://github.com/singingwolfboy/lektor.git@fix-ghpages-https-deploy#egg=lektor"
-script: "lektor build"
-deploy:
-  provider: script
-  script: "lektor deploy ghpages-https"
-  on:
-    branch: lektor
+version: 1.0
+
+jobs: 
+  build:
+    docker:
+      -image circleci/python:latest
+    working_directory: ~/
+    steps:
+      - run:
+          name: Install Lektor
+          command: |
+            pip install git+https://github.com/singingwolfboy/lektor.git@fix-ghpages-https-deploy#egg=lektor
+            lektor build
+            lektor deploy ghpages
+
