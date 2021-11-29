@@ -4,11 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/python:latest
-    working_directory: ~
     steps:
       - run:
           name: Install Lektor
           command: |
             pip install Lektor
-            lektor build
-            lektor deploy ghpages
+            lektor build && lektor deploy ghpages
