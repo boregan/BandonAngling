@@ -8,5 +8,5 @@ jobs:
       - run:
           name: Install Lektor
           command: |
-            pip install Lektor
+            sudo pip install Lektor
             lektor build && lektor deploy ghpages
