@@ -75,7 +75,10 @@
           <ul class="nav navbar-nav">
             <li{% if this._path=='/' %} {% endif %}><a href="{{ '/'|url }}">Home</a>
               </li>
-              {% for href, title in [ ['/blog', 'Blog'], ['/visitors', 'Visitors'], ['/river-development', 'River Development'], ['/blog/membership-form/', 'Membership'], ['/gallery', 'Gallery'], ['/contact', 'Contact'] ] %}
+              <li>              <a href="http://itsplainsailing.com/org/baa" target="_blank">Visitors & Membership</a>
+              </li>
+              {% for href, title in [ ['/blog', 'Blog'], ['/river-development', 'River Development'], ['/gallery', 'Gallery'], ['/contact', 'Contact'] ] %}
+              
               <li{% if this.is_child_of(href) %} {% endif %}><a href="{{ href|url }}">{{ title }}</a>
               </li>
               {% endfor %}
