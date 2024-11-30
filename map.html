@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bandon Angling Association</title>
+
+    <!-- Bootstrap CSS (Latest Version) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/img/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Bandon Angling Association" />
+    <meta property="og:description" content="Welcome to Bandon Angling Association's official website." />
+    <meta property="og:image" content="logo.png" />
+    <meta property="og:url" content="https://bandonangling.com/" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Bandon Angling Association",
+        "url": "https://bandonangling.com/",
+        "sameAs": [
+            "https://www.facebook.com/BandonAnglingAssociation"
+        ]
+    }
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                palette: {
+                    popup: {
+                        background: "#343a40"
+                    },
+                    button: {
+                        background: "#196b40"
+                    }
+                },
+                theme: "classic",
+                position: "bottom",
+                type: "opt-in",
+                content: {
+                    message: "We use cookies to ensure you get the best experience on our website. Some features may require cookies, like Facebook integration.",
+                    dismiss: "Got it!",
+                    deny: "Decline",
+                    allow: "Allow cookies",
+                    link: "Learn more",
+                    href: "/privacy-policy.html" // Link to your privacy policy
+                },
+                onStatusChange: function (status) {
+                    if (status === 'allow') {
+                        // Load Facebook SDK when cookies are accepted
+                        loadFacebookSDK();
+                    }
+                }
+            });
+        });
+        
+        // Function to load Facebook SDK
+        function loadFacebookSDK() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.defer = true;
+            script.crossorigin = "anonymous";
+            script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=290142004344540";
+            document.head.appendChild(script);
+        }
+        </script>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Fonts */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #2D3A3A;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-left: 1rem;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #f8f9fa;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #2D3A3A;
+        }
+
+        .hero-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+        }
+
+        /* Cards */
+        .card-style {
+            background-color: #FAFAFA;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+
+        .card-style:first-child {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .card-style:not(:first-child) {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        .card-style:last-child {
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .card-style:not(:last-child) {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .card-body {
+            margin: 20px;
+        }
+
+        /* Horizontal Rule */
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #cccccc;
+            margin: 20px 0;
+        }
+
+        /* Embed-responsive for iframe and Facebook plugin */
+        .embed-responsive {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 20px;
+        }
+
+        .embed-responsive iframe,
+        .embed-responsive .fb-page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #196b40;
+            border-color: #196b40;
+        }
+
+        .btn-primary:hover {
+            background-color: #145531;
+            border-color: #145531;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide background video on mobile devices */
+            .bg-video {
+                display: none;
+            }
+
+            .hero-section {
+                background-image: url('static/img/header-background.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=290142004344540"></script>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+        <div class="container">
+            <a class="navbar-brand" href="./">
+                Bandon Angling Association
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://itsplainsailing.com/org/baa" target="_blank">Visitors & Membership</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="map/">Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="river-development/">River Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact/">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  
+
+    <!-- Main Content -->
+    <main>
+        <!-- First Card with the iframe -->
+        <div class="container mt-5" id="visitors-section">
+            <div class="card-style">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Map</h2>
+                    <hr>
+                    <div class="embed-responsive">
+                        <p>View the map below or download it for offline use.</p>
+            <!-- Embed PDF -->
+            <iframe src="map.pdf" type="application/pdf">
+                Your browser does not support PDF embedding. Please <a href="static/pdf/fishing-map.pdf">download the PDF</a>.
+            </iframe>
+            <!-- Download Button -->
+            <a href="static/pdf/fishing-map.pdf" download class="btn-download">Download Map</a>
+   
+                    </div>
+                </div>
+            </div>
+
+            <!-- Combined Facebook Page Plugin and Contact Details -->
+            <div class="card-style">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Facebook Page Plugin -->
+                        <div class="col-md-6">
+                            <div class="embed-responsive">
+                                <div id="fb-root"></div>
+                                <div class="fb-page" data-href="https://www.facebook.com/BandonAnglingAssociation/"
+                                    data-tabs="timeline" data-width="500" data-height="500" data-small-header="false"
+                                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                    <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Details -->
+                        <div class="col-md-6">
+                            <h4>Contact Information</h4>
+                            <p><strong>Phone:</strong> 086 3724358</p>
+                            <p><strong>Email:</strong> <a href="mailto:jason@bandonangling.com">jason@bandonangling.com</a></p>
+                            <h4 class="mt-4">Follow Us</h4>
+                            <a href="https://www.facebook.com/BandonAnglingAssociation" target="_blank" class="me-2">
+                                <img src="static/img/facebook-icon.png" alt="Facebook" width="40">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 Bandon Angling Association. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
