@@ -17,7 +17,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-
     <!-- Cookie Consent -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
@@ -81,7 +80,7 @@
             script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=290142004344540";
             document.head.appendChild(script);
         }
-        </script>
+    </script>
 
     <!-- Custom CSS -->
     <style>
@@ -250,6 +249,7 @@
                 background-position: center;
             }
         }
+
         html {
             scroll-behavior: smooth;
         }
@@ -314,20 +314,22 @@
 
     <!-- Main Content -->
     <main>
-        <!-- First Card with the iframe -->
+        <!-- First Card with the iframe and overlay -->
         <div class="container mt-5" id="visitors-section">
             <div class="card-style">
                 <div class="card-body">
                     <h2 class="card-title text-center">Visitors & Membership</h2>
                     <hr>
                     <div class="embed-responsive">
-                        <iframe src="https://www.itsplainsailing.com/org/baa" allowfullscreen></iframe>
+                        <iframe src="https://www.itsplainsailing.com/org/baa"></iframe>
+                        <!-- Transparent overlay to capture clicks -->
+                        <a href="https://www.itsplainsailing.com/org/baa" target="_blank" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; z-index: 10;">
+                            <span class="visually-hidden">Open Visitors & Membership in a new tab</span>
+                        </a>
                     </div>
                     <hr>
                 </div>
             </div>
-
-
 
             <div class="card-style" id="map">
                 <div class="card-body">
@@ -335,12 +337,12 @@
                     <hr>
                     <div class="embed-responsive">
                         <p>View the map below or download it for offline use.</p>
-                            <!-- Embed PDF -->
-                            <iframe src="map.pdf" type="application/pdf">
-                                Your browser does not support PDF embedding. Please <a href="static/pdf/fishing-map.pdf">download the PDF</a>.
-                            </iframe>
-                            <!-- Download Button -->
-                            <a href="static/pdf/fishing-map.pdf" download class="btn-download">Download Map</a>
+                        <!-- Embed PDF -->
+                        <iframe src="map.pdf" type="application/pdf">
+                            Your browser does not support PDF embedding. Please <a href="static/pdf/fishing-map.pdf">download the PDF</a>.
+                        </iframe>
+                        <!-- Download Button -->
+                        <a href="static/pdf/fishing-map.pdf" download class="btn-download">Download Map</a>
                     </div>
                     <hr>
                 </div>
@@ -348,30 +350,26 @@
 
             <div class="card-style" id="terms">
                 <div class="card-body">
-                    <h2 class="card-title text-center">Terms and Conditions</h2> <hr>
-                        <button 
-                            class="btn btn-primary d-block mx-auto"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#content"
-                            aria-expanded="false"
-                            aria-controls="content"
-                            id="toggleButton"
-                            >
-                                Click to Reveal
-                        </button>
-                        <hr>
+                    <h2 class="card-title text-center">Terms and Conditions</h2>
+                    <hr>
+                    <button 
+                        class="btn btn-primary d-block mx-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#content"
+                        aria-expanded="false"
+                        aria-controls="content"
+                        id="toggleButton">
+                            Click to Reveal
+                    </button>
+                    <hr>
                     <div class="collapse mt-3" id="content">
-              
                         <p><b>Please print out this confirmation email to display on your dashboard for inspection. If you do not have access to a printer, please write out your Booking Reference code on a piece of paper.</b></p>
-
                         <h3>Membership Rules and Guidelines</h3>
-                
                         <h4>General</h4>
                         <p>Acceptance of this membership card by the member implies acceptance and observation of the Rules and Bye-Laws of Bandon Angling Association. This card is <b>non-transferable</b>.</p>
                         <p>Members are required, when fishing, to have their Membership cards in their possession and produce them for inspection by other members, water keepers, or riparian owners. Members must possess their Member ID cards and display windscreen stickers and/or dashboard cards clearly for the relevant year.</p>
                         <p>Civility must be shown to water keepers, other members, fishery officers, and riparian owners. Landowners' property must be respected at all times. Basic angling etiquette must be exercised on club waters at all times:</p>
-                
                         <h4>Basic Angling Etiquette</h4>
                         <ul>
                             <li>When approaching a pool, ensure no other angler is fishing. If someone is fishing:
@@ -390,9 +388,7 @@
                             <li>If an angler is fishing a pool from the opposite bank, do not fish in the same pool. Refer to Point 1 for guidance.</li>
                             <li>If fishing alone and no other anglers are present, you may fish a pool or stretch multiple times.</li>
                         </ul>
-                
                         <p>Park responsibly, taking others into consideration, and do not obstruct gates or passageways. Always close gates and fencing after you. Do not trample fencing. Beware of livestock. <b>Never take a dog fishing.</b></p>
-                
                         <h4>Salmon Fishing Rules</h4>
                         <p>Anglers fishing for salmon must hold a <b>state salmon license</b>.</p>
                         <h5>Daily Bag Limits:</h5>
@@ -408,7 +404,6 @@
                             <li>Kelts, slats, or spent fish should not be killed and must be returned quickly and safely. <b>If in doubt, return it.</b></li>
                         </ul>
                         <p>Catch and release fishing is always encouraged. Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
-                
                         <h4>Trout Fishing Rules</h4>
                         <p>Anglers fishing for sea trout must hold a <b>state salmon license</b>.</p>
                         <h5>Daily Bag Limits:</h5>
@@ -418,7 +413,6 @@
                             <li>Anglers cannot keep 4 brown trout <b>and</b> 2 sea trout per day.</li>
                         </ul>
                         <p>All flies must have a <b>single hook only</b>. Catch and release fishing is always encouraged. <b>Competition trout fishing is strictly forbidden.</b> Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
-                
                         <hr>
                     </div>
                 </div>
@@ -435,7 +429,6 @@
                 });
             </script>
 
-
             <div class="card-style" id="contact">
                 <div class="card-body">
                     <hr>
@@ -445,7 +438,7 @@
                             <div class="embed-responsive">
                                 <div id="fb-root"></div>
                                 <div class="fb-page" data-href="https://www.facebook.com/BandonAnglingAssociation/"
-                                    data-tabs="timeline" data-width="500"  data-small-header="false"
+                                    data-tabs="timeline" data-width="500" data-small-header="false"
                                     data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
                                     <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/" class="fb-xfbml-parse-ignore">
                                         <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
@@ -464,7 +457,6 @@
                 </div>
             </div>
 
-            
         </div>
     </main>
 
