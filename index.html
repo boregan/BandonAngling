@@ -5,8 +5,13 @@
     <!-- Required Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Join Bandon Angling Association for premium salmon and trout fishing on West Cork's beautiful Bandon River. Membership options, day permits, and fishing rules available." />
+    <meta name="keywords" content="fishing, angling, Bandon River, salmon, trout, fly fishing, West Cork, Ireland, membership" />
+    <meta name="author" content="Bandon Angling Association" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2d3a3a" />
 
-    <title>Bandon Angling Association</title>
+    <title>Bandon Angling Association | Salmon & Trout Fishing in West Cork</title>
 
     <!-- Bootstrap CSS (Latest Version) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,28 +20,52 @@
     <link rel="shortcut icon" type="image/png" href="static/img/favicon.png" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Cookie Consent -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Bandon Angling Association" />
-    <meta property="og:description" content="Welcome to Bandon Angling Association's official website." />
-    <meta property="og:image" content="logo.png" />
+    <meta property="og:title" content="Bandon Angling Association | Fishing in West Cork" />
+    <meta property="og:description" content="Join Bandon Angling Association for premium salmon and trout fishing memberships and day permits on the Bandon River." />
+    <meta property="og:image" content="https://bandonangling.com/logo.png" />
     <meta property="og:url" content="https://bandonangling.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bandon Angling Association" />
+    <meta name="twitter:description" content="Join our fishing community for salmon and trout fishing on the Bandon River" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bandonangling.com/" />
 
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Bandon Angling Association",
         "url": "https://bandonangling.com/",
+        "logo": "https://bandonangling.com/logo.png",
+        "description": "Fishing club offering salmon and trout fishing memberships and day permits on the Bandon River in West Cork, Ireland",
         "sameAs": [
             "https://www.facebook.com/BandonAnglingAssociation"
-        ]
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "086-3724358",
+            "email": "help@bandonangling.com"
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "West Cork, Ireland",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "Cork",
+                "addressCountry": "IE"
+            }
+        }
     }
     </script>
 
@@ -45,10 +74,10 @@
             window.cookieconsent.initialise({
                 palette: {
                     popup: {
-                        background: "#343a40"
+                        background: "#2d3a3a"
                     },
                     button: {
-                        background: "#196b40"
+                        background: "#2d3a3a"
                     }
                 },
                 theme: "classic",
@@ -87,27 +116,110 @@
         /* Custom Fonts */
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #2D3A3A;
+            background-color: #f5f5f5;
         }
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Skip to Content Link */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #2d3a3a;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            font-size: 0.9rem;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+            outline: 3px solid #4a9d6f;
         }
 
         /* Navbar */
+        .navbar {
+            background: #2d3a3a !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         .navbar-nav .nav-link {
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            margin-left: 1rem;
+            margin-left: 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #f0f0f0 !important;
+            transform: translateY(-2px);
         }
 
         .navbar-nav .nav-link.active {
-            color: #f8f9fa;
+            color: #f8f9fa !important;
+            border-bottom: 3px solid #fff;
+        }
+
+        @media (max-width: 991px) {
+            .navbar {
+                padding: 0.75rem 0 !important;
+            }
+
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+
+            .navbar-nav {
+                padding-top: 1rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.95rem;
+                margin-left: 0;
+                padding: 0.5rem 0 !important;
+                border-bottom: 2px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .navbar-nav .nav-link:hover {
+                color: #f0f0f0 !important;
+                border-bottom: 2px solid #f0f0f0;
+            }
+
+            .navbar-nav .nav-link.active {
+                border-bottom: 2px solid #fff;
+            }
+
+            .nav-link i {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 0.5rem 0 !important;
+            }
+
+            .nav-link i {
+                font-size: 1.1rem;
+            }
         }
 
         /* Hero Section */
@@ -115,7 +227,7 @@
             position: relative;
             height: 100vh;
             overflow: hidden;
-            background-color: #2D3A3A;
+            background: #2d3a3a;
         }
 
         .hero-section .overlay {
@@ -124,7 +236,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.4);
         }
 
         .bg-video {
@@ -142,53 +254,215 @@
             top: 50%;
             transform: translateY(-50%);
             color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-50%);
+            }
         }
 
         .hero-content h1 {
-            font-size: 3rem;
-            font-weight: bold;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero-content p {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
+            font-weight: 300;
+        }
+
+        .hero-content img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content img {
+                width: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 60vh;
+                min-height: 450px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 0.8rem;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            }
+
+            .hero-content p {
+                font-size: 1.05rem;
+            }
+
+            .hero-content img {
+                width: 250px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                height: 50vh;
+                min-height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .hero-content img {
+                width: 200px;
+                margin-bottom: 0.8rem;
+            }
+
+            .hero-content {
+                padding: 0 15px;
+            }
         }
 
         /* Cards */
         .card-style {
-            background-color: #FAFAFA;
-            border: 1px solid #000;
-            margin-bottom: 20px;
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card-style:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .card-style#merchandise {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-top: 5px solid #2d3a3a;
+            box-shadow: 0 6px 20px rgba(45, 58, 58, 0.15);
+        }
+
+        .card-style#merchandise {
+            position: relative;
+        }
+
+        .card-style#merchandise:hover {
+            box-shadow: 0 10px 28px rgba(45, 58, 58, 0.18);
+        }
+
+        .card-style#map,
+        .card-style#terms,
+        .card-style#contact {
+            border-top: 5px solid #4a9d6f;
         }
 
         .card-style:first-child {
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-        }
-
-        .card-style:not(:first-child) {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            border-top: 5px solid #4a9d6f;
         }
 
         .card-style:last-child {
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
-        }
-
-        .card-style:not(:last-child) {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            border-radius: 10px;
         }
 
         .card-body {
-            margin: 20px;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 25px;
+            }
+
+            .card-style {
+                margin-bottom: 30px;
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 20px;
+            }
+
+            .card-style {
+                margin-bottom: 20px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #2d3a3a;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .card-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #2d3a3a;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .card-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.2rem;
+            }
+
+            .card-title::after {
+                width: 50px;
+                height: 2px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card-title {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+
+            .card-title::after {
+                width: 40px;
+                bottom: -8px;
+            }
         }
 
         /* Horizontal Rule */
         hr {
             border: 0;
             height: 1px;
-            background-color: #cccccc;
+            background-color: #e0e0e0;
             margin: 20px 0;
         }
 
@@ -199,6 +473,7 @@
             overflow: hidden;
             padding-top: 56.25%; /* 16:9 aspect ratio */
             margin-bottom: 20px;
+            border-radius: 6px;
         }
 
         .embed-responsive iframe,
@@ -211,62 +486,1574 @@
             border: 0;
         }
 
+        /* Visitors & Membership Section */
+        .visitors-content {
+            padding: 20px 0;
+        }
+
+        /* Day Permits Section */
+        .day-permits-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e8e9ea;
+        }
+
+        .day-permits-card {
+            background: linear-gradient(135deg, #2d3a3a 0%, #1a2525 100%);
+            border-radius: 12px;
+            padding: 45px 35px;
+            text-align: center;
+            border: 1px solid #3d4d4d;
+            color: white;
+            box-shadow: 0 8px 25px rgba(45, 58, 58, 0.2);
+        }
+
+        .day-permits-icon {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .day-permits-card h3 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .day-permits-description {
+            color: #e0e0e0;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .day-permits-card .btn-primary {
+            background-color: #4a9d6f;
+            border-color: #4a9d6f;
+            font-size: 1rem;
+            padding: 12px 40px;
+        }
+
+        .day-permits-card .btn-primary:hover {
+            background-color: #3a7d5f;
+            border-color: #3a7d5f;
+        }
+
+        /* Membership Options Section */
+        .membership-section {
+            margin-top: 40px;
+        }
+
+        .membership-title {
+            text-align: center;
+            color: #2d3a3a;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 35px;
+        }
+
+        .membership-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        .membership-card {
+            background: linear-gradient(135deg, #f9fafb 0%, #f0f1f2 100%);
+            border-radius: 10px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e8e9ea;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .membership-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(45, 58, 58, 0.15);
+            background: linear-gradient(135deg, #fff 0%, #f5f6f7 100%);
+        }
+
+        .membership-icon {
+            font-size: 2.5rem;
+            color: #2d3a3a;
+            margin-bottom: 15px;
+        }
+
+        .membership-card h4 {
+            color: #2d3a3a;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .membership-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3a3a;
+            margin: 10px 0;
+        }
+
+        .fee-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 20px !important;
+        }
+
+        .membership-card .btn {
+            margin-top: auto;
+        }
+
+        .membership-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e9ea;
+        }
+
+        @media (max-width: 768px) {
+            .day-permits-card {
+                padding: 35px 25px;
+            }
+
+            .day-permits-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .day-permits-icon {
+                font-size: 3rem;
+            }
+
+            .membership-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .membership-title {
+                font-size: 1.3rem;
+                margin-bottom: 25px;
+            }
+
+            .membership-card {
+                padding: 20px;
+            }
+
+            .membership-icon {
+                font-size: 2.2rem;
+            }
+
+            .membership-card h4 {
+                font-size: 1rem;
+            }
+
+            .price {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .day-permits-card {
+                padding: 25px 20px;
+            }
+
+            .day-permits-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .day-permits-icon {
+                font-size: 2.5rem;
+            }
+
+            .day-permits-description {
+                font-size: 0.9rem;
+            }
+
+            .membership-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .membership-card {
+                padding: 18px;
+            }
+
+            .membership-icon {
+                font-size: 2rem;
+            }
+
+            .membership-card h4 {
+                font-size: 0.95rem;
+            }
+
+            .membership-card p {
+                font-size: 0.8rem;
+            }
+
+            .price {
+                font-size: 1.1rem;
+            }
+
+            .fee-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Map Section */
+        .map-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .map-preview {
+            text-align: center;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f1fa 100%);
+            border-radius: 10px;
+            border: 2px dashed #2d3a3a;
+        }
+
+        .map-preview i {
+            font-size: 4rem;
+            color: #2d3a3a;
+            margin-bottom: 15px;
+        }
+
+        .map-preview h4 {
+            color: #2d3a3a;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .map-preview p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .map-download {
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border-left: 4px solid #2d3a3a;
+        }
+
+        .download-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .download-icon {
+            font-size: 2.5rem;
+            color: #dc2626;
+        }
+
+        .download-text h5 {
+            color: #2d3a3a;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .download-text p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Terms Preview & Expand */
+        .terms-wrapper {
+            margin-bottom: 0;
+        }
+
+        .terms-preview {
+            background: linear-gradient(135deg, #fffbf0 0%, #fff9f0 100%);
+            border: 1px solid #f0e0c0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .terms-preview-content {
+            margin-bottom: 20px;
+        }
+
+        .btn-expand-terms {
+            background: transparent;
+            border: 2px solid #2d3a3a;
+            color: #2d3a3a;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-expand-terms:hover {
+            background: #2d3a3a;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(45, 58, 58, 0.2);
+        }
+
+        .btn-expand-terms i {
+            transition: transform 0.3s ease;
+            font-size: 0.85rem;
+        }
+
+        .btn-expand-terms.expanded i {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .visitors-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .map-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .map-preview {
+                padding: 30px 20px;
+            }
+
+            .visitors-card {
+                padding: 20px;
+            }
+
+            .visitors-icon {
+                font-size: 2.3rem;
+            }
+
+            .map-download {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .visitors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                grid-template-columns: 1fr;
+            }
+
+            .visitors-card {
+                padding: 15px;
+            }
+
+            .visitors-icon {
+                font-size: 2rem;
+            }
+
+            .visitors-card h4 {
+                font-size: 1.1rem;
+            }
+
+            .visitors-card p {
+                font-size: 0.9rem;
+            }
+
+            .map-preview {
+                padding: 20px 15px;
+            }
+
+            .map-preview i {
+                font-size: 3rem;
+            }
+
+            .map-preview h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Merchandise Section Special Styling */
+        #merchandise .card-body {
+            padding: 40px;
+        }
+
+        #merchandise .card-title {
+            color: #2d3a3a;
+            font-size: 2rem;
+        }
+
+        #merchandise stripe-buy-button {
+            display: inline-block;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        #merchandise .card-body > .text-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            #merchandise .card-body {
+                padding: 25px;
+            }
+
+            #merchandise .card-title {
+                font-size: 1.6rem;
+            }
+
+            #merchandise stripe-buy-button {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #merchandise .card-body {
+                padding: 18px;
+            }
+
+            #merchandise .card-title {
+                font-size: 1.4rem;
+            }
+
+            #merchandise stripe-buy-button {
+                margin-top: 15px;
+            }
+        }
+
+        .merchandise-container {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+            min-height: 400px;
+            align-items: center;
+        }
+
+        /* Merchandise Layout */
+        .merchandise-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .merchandise-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 550px;
+            justify-content: flex-start;
+        }
+
+        .merchandise-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .merchandise-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+        }
+
+        .merchandise-details {
+            display: flex;
+            flex-direction: column;
+            padding-right: 10px;
+        }
+
+        .preorder-inline {
+            position: static !important;
+            top: auto !important;
+            right: auto !important;
+            left: auto !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 0 25px 0 !important;
+            padding: 18px 24px !important;
+            display: block !important;
+            text-align: center !important;
+            background: #f5f5f5 !important;
+            border: 2px solid #4a9d6f !important;
+            border-radius: 8px !important;
+        }
+
+        .preorder-inline .preorder-title,
+        .preorder-inline .preorder-text,
+        .preorder-inline .preorder-shipping {
+            text-align: center !important;
+        }
+
+        .preorder-inline .preorder-title {
+            color: #4a9d6f !important;
+            font-size: 1rem !important;
+            margin-bottom: 6px !important;
+        }
+
+        .preorder-inline .preorder-text {
+            font-size: 1rem !important;
+            color: #2d3a3a !important;
+            font-weight: 600 !important;
+            margin: 8px 0 !important;
+        }
+
+        .preorder-inline .preorder-shipping {
+            font-size: 0.9rem !important;
+            color: #555 !important;
+            margin: 8px 0 0 0 !important;
+        }
+
+        .merchandise-purchase {
+            margin: 25px auto 30px auto;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .merchandise-purchase stripe-buy-button {
+            margin: 0 auto;
+        }
+
+        /* Sizing Guide - Minimal Style */
+        .sizing-guide-section {
+            margin-top: 0;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .btn-sizing-minimal {
+            background: #fff;
+            border: 2px solid #2d3a3a;
+            color: #2d3a3a;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+        .btn-sizing-minimal:hover {
+            color: #fff;
+            background: #2d3a3a;
+            border-color: #2d3a3a;
+        }
+
+        .btn-sizing-minimal i {
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-sizing-minimal[aria-expanded="true"] i {
+            transform: rotate(180deg);
+        }
+
+        .sizing-label {
+            font-weight: 600;
+        }
+
+        .sizing-chart-minimal {
+            padding-top: 12px;
+        }
+
+        .sizing-table {
+            width: 100%;
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        .sizing-table thead {
+            background: #f9fafb;
+            border-bottom: 1px solid #e8e9ea;
+        }
+
+        .sizing-table th {
+            padding: 8px 4px;
+            text-align: center;
+            font-weight: 600;
+            color: #2d3a3a;
+        }
+
+        .sizing-table td {
+            padding: 6px 4px;
+            text-align: center;
+            border-bottom: 1px solid #f0f1f2;
+        }
+
+        .sizing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .text-xs {
+            font-size: 0.75rem !important;
+        }
+
+        @media (max-width: 1024px) {
+            .merchandise-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .merchandise-image-container {
+                min-height: 450px;
+            }
+
+            .merchandise-image {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .merchandise-layout {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .merchandise-image-container {
+                min-height: 350px;
+            }
+
+            .merchandise-image {
+                height: 300px;
+                margin-bottom: 0;
+            }
+
+            .preorder-inline {
+                padding: 12px 14px !important;
+            }
+
+            .merchandise-purchase {
+                margin: 15px 0 20px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .merchandise-layout {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .merchandise-image-container {
+                min-height: 280px;
+            }
+
+            .merchandise-image {
+                height: 250px;
+                border-radius: 8px;
+            }
+
+            .merchandise-details h4 {
+                font-size: 1.1rem;
+                margin-top: 15px;
+            }
+
+            .sizing-table {
+                font-size: 0.75rem;
+            }
+
+            .sizing-table th,
+            .sizing-table td {
+                padding: 5px 2px;
+            }
+        }
+
+        /* Image Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .image-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #ccc;
+            transform: scale(1.1);
+        }
+
+        #merchandise h4 {
+            color: #2d3a3a;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        #merchandise > .card-body > .text-center > p:not(.text-muted) {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .text-muted.small {
+            color: #999 !important;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        #merchandise stripe-buy-button {
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        #merchandise .card-body > .text-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            #merchandise h4 {
+                font-size: 1.4rem;
+                margin-top: 12px;
+                margin-bottom: 10px;
+            }
+
+            #merchandise > .card-body > .text-center > p:not(.text-muted) {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .text-muted.small {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #merchandise h4 {
+                font-size: 1.25rem;
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+
+            #merchandise > .card-body > .text-center > p:not(.text-muted) {
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+
+            .text-muted.small {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Sizing Guide */
+        .btn-sizing {
+            background: linear-gradient(135deg, #f5f5f5 0%, #f0f0f0 100%);
+            color: #2d3a3a;
+            border: 1.5px solid #ddd;
+            font-weight: 600;
+            padding: 13px 28px;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-sizing:hover {
+            background: linear-gradient(135deg, #e8e8e8 0%, #e0e0e0 100%);
+            border-color: #2d3a3a;
+            color: #2d3a3a;
+            box-shadow: 0 4px 12px rgba(45, 58, 58, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .btn-sizing:active {
+            transform: translateY(0);
+        }
+
+        .btn-sizing i {
+            margin-right: 7px;
+        }
+
+        @media (max-width: 768px) {
+            .btn-sizing {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn-sizing {
+                padding: 11px 20px;
+                font-size: 0.85rem;
+                width: 100%;
+            }
+        }
+
+        .sizing-chart {
+            background-color: #f9fafb;
+            padding: 24px;
+            border-radius: 9px;
+            margin-top: 18px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .sizing-chart table {
+            margin-bottom: 0;
+        }
+
+        .sizing-chart thead {
+            background-color: #f0f0f0;
+        }
+
+        .sizing-chart th {
+            color: #2d3a3a;
+            font-weight: 700;
+            text-align: center;
+            padding: 14px 10px;
+            border: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            letter-spacing: 0.2px;
+        }
+
+        .sizing-chart td {
+            text-align: center;
+            padding: 13px 10px;
+            border: 1px solid #e8e8e8;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .sizing-chart td strong {
+            color: #2d3a3a;
+            font-weight: 700;
+        }
+
+        .sizing-chart > p {
+            margin-top: 16px;
+            margin-bottom: 0;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 768px) {
+            .sizing-chart {
+                padding: 18px;
+                margin-top: 15px;
+            }
+
+            .sizing-chart table {
+                font-size: 0.85rem;
+            }
+
+            .sizing-chart th,
+            .sizing-chart td {
+                padding: 10px 6px;
+            }
+
+            .sizing-chart > p {
+                font-size: 0.75rem;
+                margin-top: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sizing-chart {
+                padding: 14px;
+                margin-top: 12px;
+            }
+
+            .sizing-chart table {
+                font-size: 0.8rem;
+            }
+
+            .sizing-chart th,
+            .sizing-chart td {
+                padding: 8px 4px;
+            }
+
+            .sizing-chart th {
+                font-size: 0.8rem;
+            }
+
+            .sizing-chart td {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Terms and Conditions */
+        .terms-content {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .terms-section {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .terms-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .terms-alert {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #2d3a3a;
+            border-radius: 4px;
+            margin: 0;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .terms-heading {
+            color: #2d3a3a;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+
+        .terms-subheading {
+            color: #2d3a3a;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .terms-list {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 20px;
+            }
+
+            .terms-heading {
+                font-size: 1.2rem;
+            }
+
+            .terms-subheading {
+                font-size: 1rem;
+            }
+
+            .terms-alert {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+
+            .terms-list {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .terms-content {
+                padding: 15px;
+            }
+
+            .terms-heading {
+                font-size: 1.1rem;
+            }
+
+            .terms-subheading {
+                font-size: 0.95rem;
+            }
+
+            .terms-alert {
+                font-size: 0.85rem;
+                padding: 10px;
+            }
+
+            .terms-list {
+                font-size: 0.85rem;
+                padding-left: 18px;
+            }
+        }
+
+        /* Pre-order Alert Styling */
+        .preorder-alert {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 2px solid #dc2626;
+            border-radius: 10px;
+            padding: 14px 16px;
+            text-align: center;
+            max-width: 190px;
+            z-index: 10;
+            box-shadow: 0 6px 16px rgba(220, 38, 38, 0.12);
+            backdrop-filter: blur(2px);
+        }
+
+        .preorder-title {
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin: 0 0 6px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .preorder-text {
+            color: #2d3a3a;
+            margin: 6px 0 12px 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .preorder-shipping {
+            color: #2d3a3a;
+            font-size: 0.85rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 991px) {
+            .preorder-alert {
+                position: relative;
+                margin: 0 0 20px 0;
+                width: 100%;
+                max-width: none;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                padding: 16px 20px;
+            }
+
+            .preorder-title {
+                margin: 0;
+                font-size: 0.85rem;
+            }
+
+            .preorder-text {
+                margin: 0;
+                font-size: 0.8rem;
+            }
+
+            .countdown-timer {
+                margin: 0;
+                gap: 8px;
+                flex: 1;
+            }
+
+            .countdown-number {
+                font-size: 1.3rem;
+            }
+
+            .countdown-label {
+                font-size: 0.65rem;
+            }
+
+            .preorder-shipping {
+                margin: 0;
+            }
+
+            .preorder-alert > p:first-child {
+                margin: 0;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .preorder-alert {
+                flex-direction: column;
+                gap: 8px;
+                padding: 14px 16px;
+                margin: 0 auto 20px auto !important;
+                width: 90% !important;
+                max-width: 300px !important;
+                position: relative !important;
+                left: auto !important;
+                right: auto !important;
+            }
+
+            .preorder-title {
+                font-size: 0.8rem;
+            }
+
+            .preorder-text {
+                font-size: 0.75rem;
+            }
+
+            .countdown-timer {
+                width: 100%;
+                gap: 10px;
+            }
+
+            .countdown-number {
+                font-size: 1.2rem;
+            }
+
+            .countdown-label {
+                font-size: 0.6rem;
+            }
+
+            .preorder-alert > p:first-child {
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .preorder-alert {
+                padding: 12px 14px;
+            }
+
+            .preorder-title {
+                font-size: 0.75rem;
+            }
+
+            .preorder-text {
+                font-size: 0.7rem;
+            }
+
+            .countdown-number {
+                font-size: 1rem;
+            }
+
+            .countdown-label {
+                font-size: 0.55rem;
+            }
+
+            .preorder-shipping {
+                font-size: 0.65rem;
+            }
+        }
+
+        .terms-mini-heading {
+            color: #2d3a3a;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .terms-list {
+            margin: 12px 0 15px 20px;
+            padding-left: 20px;
+        }
+
+        .terms-list li {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .terms-list ul {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
         /* Footer */
+        .footer-section {
+            background: #2d3a3a;
+            margin-top: 80px;
+            border-top: 4px solid #4a9d6f;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h5 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: #4a9d6f;
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            font-size: 0.9rem;
+        }
+
+        .footer-text {
+            color: #d1d5db;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 30px 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #d1d5db;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-column h5 {
+                font-size: 1rem;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .footer-links li {
+                margin-bottom: 0;
+            }
+        }
+
         footer {
-            background-color: #343a40;
+            background: #2d3a3a;
+            margin-top: 80px;
         }
 
         footer p {
             margin: 0;
             color: #fff;
+            font-weight: 500;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #e0e0e0;
+            text-decoration: underline;
         }
 
         /* Buttons */
         .btn-primary {
-            background-color: #196b40;
-            border-color: #196b40;
+            background: #2d3a3a;
+            border: none;
+            padding: 10px 24px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(45, 58, 58, 0.2);
         }
 
         .btn-primary:hover {
-            background-color: #145531;
-            border-color: #145531;
+            background: #1a2626;
+            box-shadow: 0 6px 15px rgba(45, 58, 58, 0.4);
+            transform: translateY(-2px);
+            color: #fff;
         }
 
-        /* Responsive Adjustments */
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        /* Contact Section */
+        .contact-section h4 {
+            color: #2d3a3a;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .contact-section p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .contact-section strong {
+            color: #2d3a3a;
+        }
+
+        #contact h4 {
+            color: #2d3a3a;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            padding: 20px 0;
+        }
+
+        .contact-item {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #2d3a3a;
+            border-radius: 4px;
+        }
+
+        .contact-label {
+            margin: 0;
+            color: #2d3a3a;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-value {
+            margin: 8px 0 0 0;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .contact-value a {
+            color: #2d3a3a;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-value a:hover {
+            color: #1a2626;
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
+            #contact h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
             }
 
-            /* Hide background video on mobile devices */
-            .bg-video {
-                display: none;
+            .contact-label {
+                font-size: 0.9rem;
             }
 
-            .hero-section {
-                background-image: url('static/img/header-background.jpg');
-                background-size: cover;
-                background-position: center;
+            .contact-value {
+                font-size: 1rem;
+            }
+
+            .contact-item {
+                padding: 12px;
+            }
+
+            #contact iframe {
+                height: 300px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #contact h4 {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .contact-label {
+                font-size: 0.85rem;
+            }
+
+            .contact-value {
+                font-size: 0.95rem;
+            }
+
+            .contact-item {
+                padding: 10px;
+                margin-bottom: 12px;
+            }
+
+            #contact iframe {
+                height: 250px !important;
+            }
+        }
+
+        /* General Container Padding */
+        main > .container {
+            padding: 0 15px;
+        }
+
+        /* Button Responsive */
+        .btn {
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary, .btn-secondary {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+            main > .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            main > .container {
+                padding: 0 12px;
+                margin-top: 2rem !important;
+            }
+
+            .btn {
+                min-height: 48px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            main > .container {
+                padding: 0 10px;
+                margin-top: 1.5rem !important;
+            }
+
+            .btn {
+                min-height: 44px;
+                font-size: 0.9rem;
+                padding: 10px 16px !important;
+            }
+
+            .btn-sizing {
+                width: 100%;
             }
         }
 
         html {
             scroll-behavior: smooth;
         }
+
+        /* Icon Styles */
+        .nav-link i {
+            font-size: 1.3rem;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover i {
+            color: #4a9d6f;
+            transform: scale(1.1);
+        }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Include Facebook SDK -->
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Include Facebook SDK Root -->
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0&appId=290142004344540"></script>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3">
         <div class="container">
-            <a class="navbar-brand" href="./">Bandon Angling Association</a>
+            <a class="navbar-brand" href="./">Bandon Angling</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -274,20 +2061,21 @@
             <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item"><a class="nav-link active" href="./">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="http://itsplainsailing.com/org/baa" target="_blank">Visitors & Membership</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#merchandise">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#visitors-section">Membership</a></li>
                     <li class="nav-item"><a class="nav-link" href="#map">Map</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#terms">Terms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#terms">Rules</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <!-- Messenger Icon -->
                         <a href="https://m.me/188874797818540" target="_blank" class="nav-link">
-                            <i class="fab fa-facebook-messenger" style="font-size: 1.5rem; color: #343a40;"></i>
+                            <i class="fab fa-facebook-messenger"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <!-- Email Icon -->
                         <a href="mailto:help@bandonangling.com" class="nav-link">
-                            <i class="fas fa-envelope" style="font-size: 1.5rem; color: #343a40;"></i>
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </li>
                 </ul>
@@ -298,14 +2086,13 @@
     <!-- Hero Section -->
     <header class="hero-section text-white text-center">
         <div class="overlay"></div>
-        <video autoplay loop muted playsinline preload="metadata" class="bg-video">
+        <video autoplay loop muted playsinline preload="metadata" poster="static/img/fallback-image.jpg" class="bg-video">
             <source src="video.mp4" type="video/mp4">
             <source src="static/img/video.webm" type="video/webm">
             <source src="static/img/video.ogv" type="video/ogg">
-            <img src="static/img/fallback-image.jpg" alt="Bandon River">
         </video>
         <div class="hero-content container">
-            <img src="logo.png" alt="Bandon Angling Logo" class="mb-4" width="400">
+            <img src="logo.png" alt="Bandon Angling Association Logo - Fishing in West Cork" class="mb-4" width="400" loading="lazy">
             <h1 class="display-4">Welcome to Bandon Angling Association</h1>
             <!-- <p class="lead">Experience the best angling in West Cork's beautiful Bandon River.</p> -->
             <!-- <a href="#visitors-section" class="btn btn-primary btn-lg mt-3">JOIN THE MEMBERSHIP WAITLIST</a> -->
@@ -313,36 +2100,210 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
         <!-- First Card with the iframe and overlay -->
         <div class="container mt-5" id="visitors-section">
             <div class="card-style">
                 <div class="card-body">
                     <h2 class="card-title text-center">Visitors & Membership</h2>
+                    <p class="text-center text-muted mb-4">Flexible options for visitors and members to enjoy the Bandon River.</p>
                     <hr>
-                    <div class="embed-responsive">
-                        <iframe src="https://www.itsplainsailing.com/org/baa"></iframe>
-                        <!-- Transparent overlay to capture clicks -->
-                        <a href="https://www.itsplainsailing.com/org/baa" target="_blank" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; z-index: 10;">
-                            <span class="visually-hidden">Open Visitors & Membership in a new tab</span>
-                        </a>
+                    <div class="visitors-content">
+                        <!-- Day Permits Section -->
+                        <div class="day-permits-section">
+                            <div class="day-permits-card">
+                                <div class="day-permits-icon">
+                                    <i class="fas fa-passport"></i>
+                                </div>
+                                <h3>Day Permits</h3>
+                                <p class="day-permits-description">Experience a day of fishing with a convenient daily permit. Perfect for visitors and travelers looking to enjoy the river.</p>
+                                <a href="https://www.itsplainsailing.com/org/baa/book?b=282" target="_blank" class="btn btn-primary btn-lg">Book Now</a>
+                            </div>
+                        </div>
+
+                        <!-- Membership Options -->
+                        <div class="membership-section">
+                            <h3 class="membership-title">Membership Options</h3>
+                            <div class="membership-grid">
+                                <div class="membership-card">
+                                    <div class="membership-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <h4>New Membership</h4>
+                                    <p>If you are a new member that has been accepted into the club, use this form. Once you have paid and have been approved by us you will be sent your membership card etc.</p>
+                                    <div class="price">€220.00</div>
+                                    <p class="fee-text">(plus handling fee)</p>
+                                    <a href="https://www.itsplainsailing.com/org/baa/member?id=2075" target="_blank" class="btn btn-primary btn-sm">Apply</a>
+                                </div>
+                                <div class="membership-card">
+                                    <div class="membership-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <h4>Standard Membership</h4>
+                                    <p>If you are a recurring member that has been accepted into the club, use this form. Once you have paid and have been approved by us you will be sent your membership card etc.</p>
+                                    <div class="price">€170.00</div>
+                                    <p class="fee-text">(plus handling fee)</p>
+                                    <a href="https://www.itsplainsailing.com/org/baa/member?id=1137" target="_blank" class="btn btn-primary btn-sm">Apply</a>
+                                </div>
+                                <div class="membership-card">
+                                    <div class="membership-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h4>Student Membership</h4>
+                                    <p>Members under 19 on the 1st of January can use this option to pay for membership.</p>
+                                    <div class="price">€50.00</div>
+                                    <p class="fee-text">(plus handling fee)</p>
+                                    <a href="https://www.itsplainsailing.com/org/baa/member?id=1139" target="_blank" class="btn btn-primary btn-sm">Apply</a>
+                                </div>
+                                <div class="membership-card">
+                                    <div class="membership-icon">
+                                        <i class="fas fa-child"></i>
+                                    </div>
+                                    <h4>Junior Membership</h4>
+                                    <p>Members under 9 on the 1st of January can use this option to pay for membership.</p>
+                                    <div class="price">€5.00</div>
+                                    <p class="fee-text">(plus handling fee)</p>
+                                    <a href="https://www.itsplainsailing.com/org/baa/member?id=1138" target="_blank" class="btn btn-primary btn-sm">Apply</a>
+                                </div>
+                            </div>
+                            <p class="membership-note"><strong>Note:</strong> All memberships except Day Permits require proof of membership for renewal.</p>
+                        </div>
                     </div>
                     <hr>
+                </div>
+            </div>
+
+            <div class="card-style" id="merchandise">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Merchandise</h2>
+                    <p class="text-center text-muted mb-3">High-quality gear designed for serious anglers. Order your Bandon Angling merch today.</p>
+                    <hr>
+                    
+                    <!-- Product Item: Fleece Jacket -->
+                    <div class="product-item">
+                        <div class="merchandise-layout">
+                            <!-- Left: Product Image -->
+                            <div class="merchandise-image-container">
+                                <img id="merchandiseImage" src="static/img/merchandise-fleece.png" alt="Bandon Angling Fleece Jacket - High-quality embroidered fleece" class="merchandise-image" style="cursor: pointer;" loading="lazy">
+                                <p class="text-muted small mt-2">Click image to enlarge</p>
+                            </div>
+
+                            <!-- Right: Product Details -->
+                            <div class="merchandise-details">
+                                <!-- Product Info -->
+                                <h4 class="mb-3" style="font-size: 1.45rem; color: #2d3a3a; font-weight: 700; line-height: 1.3;">Bandon Angling Fleece Jacket</h4>
+                                <p class="mb-4" style="font-size: 1rem; color: #666; line-height: 1.7;">High-quality fleece jacket with embroidered Bandon Angling logo. Perfect for staying warm on the riverbank.</p>
+
+                                <!-- Pre-Order Alert -->
+                                <div class="preorder-alert preorder-inline">
+                                    <p class="preorder-title"><i class="fas fa-shopping-cart"></i> PRE-ORDER NOW</p>
+                                    <p class="preorder-text">Made-to-order. Secure your order today.</p>
+                                    <p class="preorder-shipping">📦 Expected to ship in <strong>2 months</strong></p>
+                                </div>
+
+                                <!-- Sizing Note -->
+                                <p class="text-muted small text-center" style="margin: -10px 0 20px 0; font-size: 0.85rem;">Size options available during checkout</p>
+
+                                <!-- Purchase Button -->
+                                <script async
+                                  src="https://js.stripe.com/v3/buy-button.js">
+                                </script>
+
+                                <div class="merchandise-purchase">
+                                    <stripe-buy-button
+                                      buy-button-id="buy_btn_1SpTfGJIbafAYcO8frmYfApr"
+                                      publishable-key="pk_live_51JP588JIbafAYcO86qqG9p9qvZ1wdFCZ6GXw67K9yfNpoCpKGQljDDEKKeHcpvtp9jw25g2xPboPFvokZj2rz12i00o0be6Ntn"
+                                    >
+                                    </stripe-buy-button>
+                                </div>                            <!-- Sizing Guide -->
+                                <div class="sizing-guide-section">
+                                    <button class="btn btn-sizing-minimal" type="button" data-bs-toggle="collapse" data-bs-target="#sizingGuide" aria-expanded="false" aria-controls="sizingGuide">
+                                        <span class="sizing-label">Size Guide</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <div class="collapse" id="sizingGuide">
+                                        <div class="sizing-chart-minimal">
+                                            <table class="sizing-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Size</th>
+                                                        <th>Chest (inches)</th>
+                                                        <th>Chest (cm)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>S</strong></td>
+                                                        <td>38"</td>
+                                                        <td>96cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>M</strong></td>
+                                                        <td>40"</td>
+                                                        <td>102cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>L</strong></td>
+                                                        <td>42"</td>
+                                                        <td>107cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>XL</strong></td>
+                                                        <td>44"</td>
+                                                        <td>112cm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>XXL</strong></td>
+                                                        <td>47"</td>
+                                                        <td>119cm</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-muted text-center text-xs mt-2">Regatta Thor 350 Heavyweight Fleece</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Product Item -->
+                    
+                    <hr>
+                </div>
+            </div>
+
+            <!-- Image Modal -->
+            <div id="imageModal" class="image-modal">
+                <div class="modal-content">
+                    <span class="modal-close" id="modalClose">&times;</span>
+                    <img id="modalImage" src="static/img/merchandise-fleece.png" alt="Bandon Angling Fleece Jacket - Enlarged view">
                 </div>
             </div>
 
             <div class="card-style" id="map">
                 <div class="card-body">
                     <h2 class="card-title text-center">Map</h2>
+                    <p class="text-center text-muted mb-4">Explore the Bandon River with detailed maps showing fishing pools, access points, and local features.</p>
                     <hr>
-                    <div class="embed-responsive">
-                        <p>View the map below or download it for offline use.</p>
-                        <!-- Embed PDF -->
-                        <iframe src="map.pdf" type="application/pdf">
-                            Your browser does not support PDF embedding. Please <a href="static/pdf/fishing-map.pdf">download the PDF</a>.
-                        </iframe>
-                        <!-- Download Button -->
-                        <a href="static/pdf/fishing-map.pdf" download class="btn-download">Download Map</a>
+                    <div class="map-container">
+                        <div class="map-preview">
+                            <i class="fas fa-map"></i>
+                            <h4>Bandon River Fishing Map</h4>
+                            <p>View detailed fishing locations, pool names, and access points along the Bandon River.</p>
+                            <a href="map.pdf" target="_blank" class="btn btn-primary">View Map</a>
+                        </div>
+                        <div class="map-download">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="download-text">
+                                    <h5>Download for Offline Use</h5>
+                                    <p>Save the map to your device and access it anytime, even without internet connection.</p>
+                                </div>
+                                <a href="map.pdf" download class="btn btn-secondary btn-sm">Download PDF</a>
+                            </div>
+                        </div>
                     </div>
                     <hr>
                 </div>
@@ -350,110 +2311,140 @@
 
             <div class="card-style" id="terms">
                 <div class="card-body">
-                    <h2 class="card-title text-center">Terms and Conditions</h2>
+                    <h2 class="card-title text-center">Rules & Regulations</h2>
+                    <p class="text-center text-muted mb-4">Essential guidelines for fishing on Bandon River waters, including bag limits, prohibited methods, and angling etiquette.</p>
                     <hr>
-                    <button 
-                        class="btn btn-primary d-block mx-auto"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#content"
-                        aria-expanded="false"
-                        aria-controls="content"
-                        id="toggleButton">
-                            Click to Reveal
-                    </button>
-                    <hr>
-                    <div class="collapse mt-3" id="content">
-                        <p><b>Please print out this confirmation email to display on your dashboard for inspection. If you do not have access to a printer, please write out your Booking Reference code on a piece of paper.</b></p>
-                        <h3>Membership Rules and Guidelines</h3>
-                        <h4>General</h4>
-                        <p>Acceptance of this membership card by the member implies acceptance and observation of the Rules and Bye-Laws of Bandon Angling Association. This card is <b>non-transferable</b>.</p>
-                        <p>Members are required, when fishing, to have their Membership cards in their possession and produce them for inspection by other members, water keepers, or riparian owners. Members must possess their Member ID cards and display windscreen stickers and/or dashboard cards clearly for the relevant year.</p>
-                        <p>Civility must be shown to water keepers, other members, fishery officers, and riparian owners. Landowners' property must be respected at all times. Basic angling etiquette must be exercised on club waters at all times:</p>
-                        <h4>Basic Angling Etiquette</h4>
-                        <ul>
-                            <li>When approaching a pool, ensure no other angler is fishing. If someone is fishing:
-                                <ul>
-                                    <li>Allow them to fish through the pool and come back later.</li>
-                                    <li>Alternatively, ask if you can begin fishing at the head of the pool if they have fished down a sufficient length and are nearing the end.</li>
+                    <div class="terms-wrapper">
+                        <!-- Preview Section (Always Visible) -->
+                        <div class="terms-preview">
+                            <div class="terms-preview-content">
+                                <p class="terms-alert"><strong>Please print out this confirmation email to display on your dashboard for inspection. If you do not have access to a printer, please write out your Booking Reference code on a piece of paper.</strong></p>
+                            </div>
+                            <button 
+                                class="btn-expand-terms" 
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#termsContent"
+                                aria-expanded="false"
+                                aria-controls="termsContent"
+                                id="toggleButton">
+                                <span class="expand-text">Read Full Terms</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Full Content (Collapsible) -->
+                        <div class="collapse mt-3" id="termsContent">
+                            <div class="terms-content">
+                  
+
+                            <div class="terms-section">
+                                <h3 class="terms-heading">Membership Rules and Guidelines</h3>
+                                <h4 class="terms-subheading">General</h4>
+                                <p>Acceptance of this membership card by the member implies acceptance and observation of the Rules and Bye-Laws of Bandon Angling Association. This card is <b>non-transferable</b>.</p>
+                                <p>Members are required, when fishing, to have their Membership cards in their possession and produce them for inspection by other members, water keepers, or riparian owners. Members must possess their Member ID cards and display windscreen stickers and/or dashboard cards clearly for the relevant year.</p>
+                                <p>Civility must be shown to water keepers, other members, fishery officers, and riparian owners. Landowners' property must be respected at all times. Basic angling etiquette must be exercised on club waters at all times:</p>
+                            </div>
+
+                            <div class="terms-section">
+                                <h4 class="terms-subheading">Basic Angling Etiquette</h4>
+                                <ul class="terms-list">
+                                    <li>When approaching a pool, ensure no other angler is fishing. If someone is fishing:
+                                        <ul>
+                                            <li>Allow them to fish through the pool and come back later.</li>
+                                            <li>Alternatively, ask if you can begin fishing at the head of the pool if they have fished down a sufficient length and are nearing the end.</li>
+                                        </ul>
+                                    </li>
+                                    <li>If fishing in a pool and aware of other anglers in the immediate area, move down the pool to allow others to fish in turn.</li>
+                                    <li>After finishing fishing a pool:
+                                        <ul>
+                                            <li>Allow another angler to fish before returning to that pool.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Avoid fishing the same pool together with a group of friends, especially in small pools.</li>
+                                    <li>If an angler is fishing a pool from the opposite bank, do not fish in the same pool. Refer to Point 1 for guidance.</li>
+                                    <li>If fishing alone and no other anglers are present, you may fish a pool or stretch multiple times.</li>
                                 </ul>
-                            </li>
-                            <li>If fishing in a pool and aware of other anglers in the immediate area, move down the pool to allow others to fish in turn.</li>
-                            <li>After finishing fishing a pool:
-                                <ul>
-                                    <li>Allow another angler to fish before returning to that pool.</li>
+                                <p>Park responsibly, taking others into consideration, and do not obstruct gates or passageways. Always close gates and fencing after you. Do not trample fencing. Beware of livestock. <b>Never take a dog fishing.</b></p>
+                            </div>
+
+                            <div class="terms-section">
+                                <h4 class="terms-subheading">Salmon Fishing Rules</h4>
+                                <p>Anglers fishing for salmon must hold a <b>state salmon license</b>.</p>
+                                <h5 class="terms-mini-heading">Daily Bag Limits:</h5>
+                                <ul class="terms-list">
+                                    <li>2 salmon between May 12th and August 31st.</li>
+                                    <li>1 salmon may be retained either side of these dates.</li>
                                 </ul>
-                            </li>
-                            <li>Avoid fishing the same pool together with a group of friends, especially in small pools.</li>
-                            <li>If an angler is fishing a pool from the opposite bank, do not fish in the same pool. Refer to Point 1 for guidance.</li>
-                            <li>If fishing alone and no other anglers are present, you may fish a pool or stretch multiple times.</li>
-                        </ul>
-                        <p>Park responsibly, taking others into consideration, and do not obstruct gates or passageways. Always close gates and fencing after you. Do not trample fencing. Beware of livestock. <b>Never take a dog fishing.</b></p>
-                        <h4>Salmon Fishing Rules</h4>
-                        <p>Anglers fishing for salmon must hold a <b>state salmon license</b>.</p>
-                        <h5>Daily Bag Limits:</h5>
-                        <ul>
-                            <li>2 salmon between May 12th and August 31st.</li>
-                            <li>1 salmon may be retained either side of these dates.</li>
-                        </ul>
-                        <p>Day permit anglers may retain <b>1 salmon per visit</b>.</p>
-                        <h5>Prohibited Methods:</h5>
-                        <ul>
-                            <li>No worm or shrimp fishing before March 17th or during September.</li>
-                            <li>All lures, flies, and baits must have a <b>single hook only</b>.</li>
-                            <li>Kelts, slats, or spent fish should not be killed and must be returned quickly and safely. <b>If in doubt, return it.</b></li>
-                        </ul>
-                        <p>Catch and release fishing is always encouraged. Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
-                        <h4>Trout Fishing Rules</h4>
-                        <p>Anglers fishing for sea trout must hold a <b>state salmon license</b>.</p>
-                        <h5>Daily Bag Limits:</h5>
-                        <ul>
-                            <li>4 trout total, with a minimum size of <b>25cm</b> (nose to fork of tail).</li>
-                            <li>No more than <b>2 sea trout</b> may be kept.</li>
-                            <li>Anglers cannot keep 4 brown trout <b>and</b> 2 sea trout per day.</li>
-                        </ul>
-                        <p>All flies must have a <b>single hook only</b>. Catch and release fishing is always encouraged. <b>Competition trout fishing is strictly forbidden.</b> Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
-                        <hr>
+                                <p>Day permit anglers may retain <b>1 salmon per visit</b>.</p>
+                                <h5 class="terms-mini-heading">Prohibited Methods:</h5>
+                                <ul class="terms-list">
+                                    <li>No worm or shrimp fishing before March 17th or during September.</li>
+                                    <li>All lures, flies, and baits must have a <b>single hook only</b>.</li>
+                                    <li>Kelts, slats, or spent fish should not be killed and must be returned quickly and safely. <b>If in doubt, return it.</b></li>
+                                </ul>
+                                <p>Catch and release fishing is always encouraged. Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
+                            </div>
+
+                            <div class="terms-section">
+                                <h4 class="terms-subheading">Trout Fishing Rules</h4>
+                                <p>Anglers fishing for sea trout must hold a <b>state salmon license</b>.</p>
+                                <h5 class="terms-mini-heading">Daily Bag Limits:</h5>
+                                <ul class="terms-list">
+                                    <li>4 trout total, with a minimum size of <b>25cm</b> (nose to fork of tail).</li>
+                                    <li>No more than <b>2 sea trout</b> may be kept.</li>
+                                    <li>Anglers cannot keep 4 brown trout <b>and</b> 2 sea trout per day.</li>
+                                </ul>
+                                <p>All flies must have a <b>single hook only</b>. Catch and release fishing is always encouraged. <b>Competition trout fishing is strictly forbidden.</b> Otherwise, rules fixed by <b>Inland Fisheries Ireland</b> apply.</p>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <script>
                 const toggleButton = document.getElementById('toggleButton');
+                const termsContent = document.getElementById('termsContent');
             
-                toggleButton.addEventListener('click', function () {
-                    toggleButton.textContent =
-                        toggleButton.getAttribute('aria-expanded') === 'true'
-                            ? 'Click to Hide'
-                            : 'Click to Reveal';
+                // Update button text based on collapse state
+                termsContent.addEventListener('show.bs.collapse', function () {
+                    toggleButton.classList.add('expanded');
+                    toggleButton.querySelector('.expand-text').textContent = 'Hide Terms';
+                });
+
+                termsContent.addEventListener('hide.bs.collapse', function () {
+                    toggleButton.classList.remove('expanded');
+                    toggleButton.querySelector('.expand-text').textContent = 'Read Full Terms';
                 });
             </script>
 
             <div class="card-style" id="contact">
                 <div class="card-body">
+                    <h2 class="card-title text-center">Contact Us</h2>
+                    <p class="text-center text-muted mb-4">Have questions about membership, day permits, or fishing on the Bandon River? Get in touch with us.</p>
                     <hr>
-                    <div class="row">
-                        <!-- Facebook Page Plugin -->
+                    <div class="row g-5 align-items-start">
+                        <!-- Contact Details -->
                         <div class="col-md-6">
-                            <div class="embed-responsive">
-                                <div id="fb-root"></div>
-                                <div class="fb-page" data-href="https://www.facebook.com/BandonAnglingAssociation/"
-                                    data-tabs="timeline" data-width="500" data-small-header="false"
-                                    data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                    <blockquote cite="https://www.facebook.com/BandonAnglingAssociation/" class="fb-xfbml-parse-ignore">
-                                        <a href="https://www.facebook.com/BandonAnglingAssociation/">Bandon Angling Association</a>
-                                    </blockquote>
+                            <h4 class="mb-4">Contact Information</h4>
+                            <div class="contact-info">
+                                <div class="contact-item mb-4">
+                                    <p class="contact-label"><strong>Phone</strong></p>
+                                    <p class="contact-value">086 3724358</p>
+                                </div>
+                                <div class="contact-item">
+                                    <p class="contact-label"><strong>Email</strong></p>
+                                    <p class="contact-value"><a href="mailto:jason@bandonangling.com">jason@bandonangling.com</a></p>
                                 </div>
                             </div>
                         </div>
-                        <!-- Contact Details -->
+                        <!-- Facebook Page -->
                         <div class="col-md-6">
-                            <h4>Contact Information</h4>
-                            <p><strong>Phone:</strong> 086 3724358</p>
-                            <p><strong>Email:</strong> <a href="mailto:jason@bandonangling.com">jason@bandonangling.com</a></p>
+                            <h4 class="mb-4">Follow Us on Facebook</h4>
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBandonAnglingAssociation%2F&tabs=timeline&width=500&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="100%" height="400" style="border:none;overflow:hidden;border-radius:8px;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                         </div>
                     </div>
-                    <hr>
                 </div>
             </div>
 
@@ -461,14 +2452,78 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2023 Bandon Angling Association. All Rights Reserved.</p>
+    <footer class="footer-section text-white py-5 mt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="./">Home</a></li>
+                        <li><a href="#visitors-section">Membership</a></li>
+                        <li><a href="#merchandise">Shop</a></li>
+                        <li><a href="#terms">Rules</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5 class="footer-title">Connect</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/BandonAnglingAssociation" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="mailto:help@bandonangling.com"><i class="fas fa-envelope"></i> Email</a></li>
+                        <li><a href="https://m.me/188874797818540" target="_blank"><i class="fab fa-facebook-messenger"></i> Messenger</a></li>
+                        <li><a href="tel:086-3724358"><i class="fas fa-phone"></i> Call</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5 class="footer-title">About</h5>
+                    <p class="footer-text">Bandon Angling Association is dedicated to sustainable fishing and community engagement on West Cork's premier Bandon River.</p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Bandon Angling Association. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Image Modal Script -->
+    <script>
+        const merchandiseImage = document.getElementById('merchandiseImage');
+        const modal = document.getElementById('imageModal');
+        const modalClose = document.getElementById('modalClose');
+
+        // Open modal on image click
+        merchandiseImage.addEventListener('click', function() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal on X click
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal on background click
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
